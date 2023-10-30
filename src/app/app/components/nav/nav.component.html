@@ -1,0 +1,35 @@
+<mat-toolbar color="primary" *ngIf="!isPhone">
+  <span>Vue De Vallon</span>
+  <div class="spacer"></div>
+
+  <a 
+    *ngFor="let route of routes"
+    mat-button 
+    [routerLink]="route.url" 
+    routerLinkActive="active" 
+    ariaCurrentWhenActive="page"
+  >
+    {{ route.label }}
+  </a>
+</mat-toolbar>
+
+<mat-toolbar color="primary" *ngIf="isPhone">
+  <span>Vue De Vallon</span>
+  <div class="spacer"></div>
+  <button mat-button [matMenuTriggerFor]="menu" class="mobile">
+    <mat-icon 
+      aria-hidden="false" 
+      aria-label="Example menu icon" 
+      fontIcon="menu"
+    />
+  </button>
+  <mat-menu #menu="matMenu">
+  <button
+    mat-menu-item
+    *ngFor="let route of routes"
+    (click)="navClick(route.url)"
+  >
+    {{ route.label }}
+  </button>
+  </mat-menu>
+</mat-toolbar>

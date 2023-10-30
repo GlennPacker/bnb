@@ -1,0 +1,97 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$bnbPrimary: (
+  50: #d7eaf6,
+  100: #a0cae7,
+  200: #61a8d6,
+  300: #0088c5,
+  400: #0072bd,
+  500: #005eb3,
+  600: #0053a8,
+  700: #004498,
+  800: #003587,
+  900: #001c6b,
+
+  contrast: (
+   50: rgba(black, 0.87),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: rgba(black, 0.87),
+   400: rgba(black, 0.87),
+   500: rgba(black, 0.87),
+   600: rgba(black, 0.87),
+   700: rgba(black, 0.87),
+   800: rgba(black, 0.87),
+   900: rgba(black, 0.87),
+ )
+);
+
+$bnbSecondary: (
+  50: #fef7e0,
+  100: #fceab0,
+  200: #fadd7c,
+  300: #f8d145,
+  400: #f7c511,
+  500: #f6bb00,
+  600: #f7ae00,
+  700: #f79a00,
+  800: #f88900,
+  900: #f86900,
+
+  contrast: (
+   50: rgba(black, 0.87),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: rgba(black, 0.87),
+   400: rgba(black, 0.87),
+   500: rgba(black, 0.87),
+   600: rgba(black, 0.87),
+   700: rgba(black, 0.87),
+   800: rgba(black, 0.87),
+   900: rgba(black, 0.87),
+ )
+);
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$bnb-primary: mat.define-palette($bnbPrimary, 200);
+$bnb-accent: mat.define-palette($bnbSecondary, 400, 100, 600);
+
+
+.background-secondary {
+  background-color: #f8d145;
+}
+
+// The warn palette is optional (defaults to red).
+$bnb-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$bnb-theme: mat.define-light-theme((
+  color: (
+    primary: $bnb-primary,
+    accent: $bnb-accent,
+    warn: $bnb-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($bnb-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
