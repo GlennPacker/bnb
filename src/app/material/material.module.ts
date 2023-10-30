@@ -13,4 +13,5 @@ import { MatIconModule } from '@angular/material/icon';
     MatMenuModule
   ],
 })
+
 export class MaterialModule { }

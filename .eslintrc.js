@@ -15,6 +15,7 @@ module.exports = {
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        'no-multiple-empty-lines': ["error", { "max": 2, "maxEOF": 0 }],
         quotes: ['error', 'single', { allowTemplateLiterals: true }],
         'linebreak-style': ['warn', 'windows'],
         'function-paren-newline': ['warn', 'multiline-arguments'],
