@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { LocationContainerComponent } from './location-container.component';
 
 describe('LocationContainerComponent', () => {
@@ -8,7 +8,8 @@ describe('LocationContainerComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [LocationContainerComponent]
+      declarations: [LocationContainerComponent],
+      schemas:[NO_ERRORS_SCHEMA],
     });
     fixture = TestBed.createComponent(LocationContainerComponent);
     component = fixture.componentInstance;

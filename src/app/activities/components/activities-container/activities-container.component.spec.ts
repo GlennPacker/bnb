@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ActivitiesContainerComponent } from './activities-container.component';
 
 describe('ActivitiesContainerComponent', () => {
@@ -8,7 +8,8 @@ describe('ActivitiesContainerComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ActivitiesContainerComponent]
+      declarations: [ActivitiesContainerComponent],
+      schemas:[NO_ERRORS_SCHEMA],
     });
     fixture = TestBed.createComponent(ActivitiesContainerComponent);
     component = fixture.componentInstance;
