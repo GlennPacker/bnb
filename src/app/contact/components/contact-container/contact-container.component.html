@@ -1,0 +1,6 @@
+<app-contact 
+  [contactForm]="contactForm"
+  (save)="saveForm($event)"
+/>
+
+{{ contactForm  | json }}

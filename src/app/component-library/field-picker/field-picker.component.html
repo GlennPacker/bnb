@@ -1,0 +1,10 @@
+<div *ngFor="let field of schema.fieldData">
+  <app-input
+    *ngIf="field.control === 'input'"
+    [form]="schema.form"
+    [hint]="field.hint"
+    [label]="field.label"
+    [prop]="field.prop"
+    [validationRulesAndMessages]="field.validationRules"
+  />
+</div>

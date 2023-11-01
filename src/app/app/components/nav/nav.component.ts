@@ -10,11 +10,11 @@ import { Router } from '@angular/router';
 export class NavComponent implements OnInit {
   isPhone = false;
   routes = [
-    { url: '/', label: 'Welcome'},
     { url: '/accommodation', label: 'Accommodation'},
     { url: '/photo-gallery', label: 'Photo Gallery'},
     { url: '/location', label: 'Attractions'},
     { url: '/activities', label: 'Activities'},
+    { url: '/booking', label: 'Reservations'},
   ]
 
   constructor(
@@ -28,7 +28,10 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {
     this.responsive.observe([   
-      Breakpoints.HandsetPortrait,
+      // Breakpoints.HandsetPortrait,
+      // Breakpoints.Handset
+      
+      Breakpoints.XSmall
       ])
       .subscribe(result => {
 

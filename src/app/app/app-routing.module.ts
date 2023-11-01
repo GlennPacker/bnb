@@ -1,13 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { AppComponent } from './app.component';
+// import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
-  {
-     path: '',
-     component: AppComponent
-  },
   {
     path: 'accommodation',
     loadChildren: () => import('../accomodation/accomodation.module').then(m => m.AccomodationModule)
@@ -24,7 +19,19 @@ const routes: Routes = [
     path: 'activities',
     loadChildren: () => import('../activities/activities.module').then(m => m.ActivitiesModule)
   },
-  { path: '**', component: NotFoundComponent }
+  { 
+    path: 'contact', 
+    loadChildren: () => import('../contact/contact.module').then(m => m.ContactModule) 
+  },
+  {
+    path: '',
+    loadChildren: () => import('../welcome/welcome.module').then(m => m.WelcomeModule)
+  },
+  { 
+    path: 'booking', 
+    loadChildren: () => import('../booking/booking.module').then(m => m.BookingModule) 
+  },
+  { path: '**', redirectTo: ''}
 ];
 
 @NgModule({

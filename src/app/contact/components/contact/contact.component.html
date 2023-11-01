@@ -1,0 +1,39 @@
+<p>contact works!</p>
+
+<div [formGroup]="form">
+  <mat-form-field class="wide-controls">
+    <input
+      matInput
+      formControlName="name"
+      placeholder="Name"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="wide-controls">
+    <input
+      matInput
+      formControlName="email"
+      placeholder="Email"
+    />
+  </mat-form-field>
+
+
+  <mat-form-field class="wide-controls">
+    <input
+      matInput
+      formControlName="message"
+      placeholder="Message"
+    />
+  </mat-form-field>
+
+
+  <button 
+    mat-button 
+    (click)="submit()">
+    <mat-icon 
+      aria-label="save icon" 
+      fontIcon="save"
+    />
+    Save
+  </button> 
+</div>

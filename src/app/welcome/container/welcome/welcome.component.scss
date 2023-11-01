@@ -1,0 +1,54 @@
+.vue-de-vallon {
+  width: 100vw;
+  height: auto;
+}
+
+.welcome-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 60vw;
+  margin-left: 20vw;
+  box-shadow: 3px 3px 3px #f8d145;
+}
+
+@media screen and (max-width: 700px) {
+  .welcome-grid {
+    margin-left: 10vw;
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .welcome-grid {
+    margin-left: 2vw;
+    width: 96vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .welcome-grid {
+    margin-left: 2vw;
+    width: 96vw;
+  }
+}
+
+.item {
+  border: 1px solid #eee;
+  padding: 1rem;
+}
+
+.item:nth-child(even) {
+  border-left: none;
+}
+
+@media screen and (max-width: 600px) {
+  .item-hidden-xs {
+    display: none;
+    border: 1px solid #eee;
+  }
+
+  .welcome-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

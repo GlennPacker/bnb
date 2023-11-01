@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from '../material/material.module';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ComponentLibraryModule } from '../component-library/component-library.module';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [],
@@ -10,7 +10,6 @@ import { ComponentLibraryModule } from '../component-library/component-library.m
     CommonModule,
     ComponentLibraryModule,
     FormsModule,
-    MaterialModule,
   ],
   exports: [
     ComponentLibraryModule,

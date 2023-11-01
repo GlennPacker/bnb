@@ -1,5 +1,10 @@
 <mat-toolbar color="primary" *ngIf="!isPhone">
-  <span>Vue De Vallon</span>
+  <a
+    class="header-logo" 
+    routerLink="/"
+  >
+    Vue De Vallon
+  </a>
   <div class="spacer"></div>
 
   <a 
@@ -11,14 +16,25 @@
   >
     {{ route.label }}
   </a>
+  <mat-icon 
+    class="pointer"
+    aria-hidden="false" 
+    aria-label="mail icon" 
+    fontIcon="mail"
+    (click)="navClick('contact')"
+  />
 </mat-toolbar>
 
 <mat-toolbar color="primary" *ngIf="isPhone">
-  <span>Vue De Vallon</span>
+  <a
+    class="header-logo" 
+    routerLink="/"
+  >
+    Vue De Vallon
+  </a>
   <div class="spacer"></div>
   <button mat-button [matMenuTriggerFor]="menu" class="mobile">
     <mat-icon 
-      aria-hidden="false" 
       aria-label="Example menu icon" 
       fontIcon="menu"
     />

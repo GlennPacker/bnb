@@ -1,0 +1,26 @@
+<h6>Reservation</h6>
+
+<form
+  (ngSubmit)="submit()"
+  [formGroup]="reservationForm"
+>
+  <app-field-picker 
+    [schema]="schema"
+  />
+  
+  <button 
+    mat-button 
+    [disabled]="!reservationForm.valid"
+    (click)="submit()">
+    <mat-icon 
+      aria-label="save icon" 
+      fontIcon="save"
+    />
+    Save
+  </button> 
+
+  <br/>Dirty {{ reservationForm.dirty }}
+  <br/>touched {{ reservationForm.touched }}
+  <br/>valid {{ reservationForm.valid }}
+  <br/>value {{ reservationForm.value | json }}
+</form>

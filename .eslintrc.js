@@ -17,7 +17,7 @@ module.exports = {
       "rules": {
         'no-multiple-empty-lines': ["error", { "max": 2, "maxEOF": 0 }],
         quotes: ['error', 'single', { allowTemplateLiterals: true }],
-        'linebreak-style': ['warn', 'windows'],
+        'linebreak-style': ['error', 'unix'],
         'function-paren-newline': ['warn', 'multiline-arguments'],
         'operator-linebreak': ['error', 'after'],
         curly: 'off',
