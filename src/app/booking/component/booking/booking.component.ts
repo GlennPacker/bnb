@@ -20,24 +20,24 @@ export class BookingComponent implements OnInit {
   public ngOnInit(): void {
     this.reservationForm = this.fb.group({
       Breakfast: new FormControl(true),
-      Email: new FormControl('', [
+      Email: ['', [
         Validators.email,
         Validators.required
-      ]),
-      EndDate: new FormControl(''),
-      EventPrice: new FormControl(),
-      Events: new FormControl(),
-      FirstName: new FormControl('', [
+      ]],
+      EndDate: '',
+      EventPrice: 0,
+      Events: '',
+      FirstName: [{ value: '', disabled: true }, [
         Validators.required,
         Validators.minLength(2)
-      ]),
-      LastName: new FormControl('', [
+      ]],
+      LastName: ['', [
         Validators.required,
         Validators.minLength(3),
-      ]),
-      PassportNumber: new FormControl(''),
-      People: new FormControl(2),
-      StartDate: new FormControl(null),
+      ]],
+      PassportNumber: [''],
+      People: [{value: 2, disabled: true}],
+      StartDate: null,
     });
 
     this.schema = {
@@ -80,5 +80,6 @@ export class BookingComponent implements OnInit {
 
   public submit() {
     console.log(this.reservationForm.value);
+    console.log(this.reservationForm.getRawValue());
   }
 }
