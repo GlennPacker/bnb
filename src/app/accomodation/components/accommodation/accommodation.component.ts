@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import Accommodation from '../../models/Accommodation';
 
 @Component({
   selector: 'app-accommodation',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./accommodation.component.scss']
 })
 export class AccommodationComponent {
-
+  @Input() public accommodation: Accommodation[];
 }

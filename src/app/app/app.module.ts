@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideRouter, withComponentInputBinding } from '@angular/router';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
 import { CoreModule } from '../core/core.module';
 import { AppRoutingModule, routes } from './app-routing.module';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
-
-import { provideRouter, withComponentInputBinding } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { provideRouter, withComponentInputBinding } from '@angular/router';
     AppRoutingModule,
     BrowserModule,
     CoreModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    EffectsModule.forRoot([]),
+    StoreModule.forRoot({}, {})
   ],
   providers: [
    provideRouter(

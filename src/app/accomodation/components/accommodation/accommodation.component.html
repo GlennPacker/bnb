@@ -1,1 +1,7 @@
-<p>accommodation works!</p>
+<div 
+  class="accommodation-table"
+  *ngFor="let room of accommodation"
+>
+  <div>{{ room.room }}</div>
+  <div>{{ room.type }}</div>
+</div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Control } from 'src/app/component-library/models/control';
+import FieldUpdated from 'src/app/component-library/models/fieldUpdated';
 import SchemaData from 'src/app/component-library/models/schemaData';
 import { Reservation } from '../../models/reservation';
 
@@ -25,9 +26,7 @@ export class BookingComponent implements OnInit {
         Validators.required
       ]],
       EndDate: '',
-      EventPrice: 0,
-      Events: '',
-      FirstName: [{ value: '', disabled: true }, [
+      FirstName: [{ value: '', disabled: false }, [
         Validators.required,
         Validators.minLength(2)
       ]],
@@ -35,9 +34,17 @@ export class BookingComponent implements OnInit {
         Validators.required,
         Validators.minLength(3),
       ]],
-      PassportNumber: [''],
+      Events: '',
+      EventPrice: { value: null, disabled: true },
+      PassportNumber: ['', Validators.required],
+      Phone: [
+        '', [
+        Validators.required,
+        Validators.minLength(9)
+      ]],
       People: [{value: 2, disabled: true}],
       StartDate: null,
+      PhonePreferredContactMethod: false
     });
 
     this.schema = {
@@ -63,19 +70,59 @@ export class BookingComponent implements OnInit {
       }, {
         control: Control.Input,
         label: 'Email',
-        hint: 'Please enter your Email Adress',
+        hint: 'Please enter your Email Address',
         prop: 'Email',
         validationRules: [{
           message: 'Email Address is not valid',
           rule: 'email'
         }]
-      },{
+      }, {
+        control: Control.Input,
+        label: 'Phone',
+        hint: 'Please enter your Phone Number',
+        prop: 'Phone',
+        validationRules: [{
+          message: 'Phone Number is not valid',
+          rule: 'minlength'
+        }]
+      }, {
+        control: Control.Input,
+        label: 'Passport Number',
+        hint: 'Please enter your Passport Number',
+        prop: 'PassportNumber',
+        validationRules: [{
+          message: 'Passport Number is not valid',
+          rule: 'minlength'
+        }]
+      }, {
+        control: Control.CheckBox,
+        label: 'Preferred Contact Method',
+        hint: 'How would you like us to contact you?',
+        prop: 'PhonePreferredContactMethod',
+      }, {
         control: Control.CheckBox,
         hint: 'Would all members of the party like Breakfast during your stay?',
         label: 'Breakfast',
         prop: 'Breakfast',
       }]
     };
+  }
+
+  public formUpdated(update: FieldUpdated) {
+    if (update.field !== 'PhonePreferredContactMethod') return;
+   
+    const phone = this.reservationForm.get('Phone');
+    
+    if (update.value) {
+      phone.clearValidators();
+    } else {
+      phone.setValidators([
+        Validators.required,
+        Validators.minLength(9)
+      ]);
+    }
+    
+    phone.updateValueAndValidity();
   }
 
   public submit() {

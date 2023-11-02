@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import FieldUpdated from '../models/fieldUpdated';
 
 @Component({
   selector: 'app-checkbox',
@@ -11,4 +12,9 @@ export class CheckboxComponent {
   @Input() public hint: string | null;
   @Input() public label: string | null;
   @Input() public prop: string;
+  @Output() updated = new EventEmitter<FieldUpdated>()
+  
+  public emitValue(value: boolean) {
+    this.updated.emit({ value, field: this.prop });
+  }
 }

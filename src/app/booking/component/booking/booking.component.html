@@ -6,6 +6,7 @@
 >
   <app-field-picker 
     [schema]="schema"
+    (updated)="formUpdated($event)"
   />
   
   <button 

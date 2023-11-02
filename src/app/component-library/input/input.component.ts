@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import FieldUpdated from '../models/fieldUpdated';
 import ValidationRuleAndMessage from '../models/validationRuleAndMessage';
 
 @Component({
@@ -13,6 +14,7 @@ export class InputComponent {
   @Input() public label: string | null;
   @Input() public prop: string;
   @Input() public validationRulesAndMessages: ValidationRuleAndMessage[]
+  @Output() updated = new EventEmitter<FieldUpdated>()
 
   public get customRules() {
     return this.validationRulesAndMessages ?
@@ -30,5 +32,9 @@ export class InputComponent {
       const error = errors[rule];
       return error ? message : '';
     }, '')
+  }
+
+  public emitValue(value: string) {
+    this.updated.emit({ value, field: this.prop });
   }
 }

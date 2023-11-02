@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import FieldUpdated from '../models/fieldUpdated';
 import SchemaData from '../models/schemaData';
 
 @Component({
@@ -8,4 +9,10 @@ import SchemaData from '../models/schemaData';
 })
 export class FieldPickerComponent {
   @Input() public schema: SchemaData;
+  @Output() updated = new EventEmitter<FieldUpdated>()
+  
+
+  public emitValue(update: FieldUpdated) {
+    this.updated.emit(update);
+  }
 }

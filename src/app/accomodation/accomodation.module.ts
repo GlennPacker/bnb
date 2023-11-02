@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { StoreModule } from '@ngrx/store';
+import { AccommodationRoutingModule } from './accomodation-routing.module';
+import { AccommodationContainerComponent } from './components/accommodation-container/accommodation-container.component';
 import { AccommodationComponent } from './components/accommodation/accommodation.component';
-import { AccommodationRoutingModule as AccommodationRoutingModule } from './accomodation-routing.module';
 import { RoomContainerComponent } from './components/room-container/room-container.component';
 import { RoomComponent } from './components/room/room.component';
 
@@ -9,11 +11,13 @@ import { RoomComponent } from './components/room/room.component';
   declarations: [
     AccommodationComponent,
     RoomContainerComponent,
-    RoomComponent
+    RoomComponent,
+    AccommodationContainerComponent
   ],
   imports: [
     CommonModule,
-    AccommodationRoutingModule
+    AccommodationRoutingModule,
+    StoreModule.forFeature('accommodation', {})
   ],
 })
 export class AccomodationModule { }

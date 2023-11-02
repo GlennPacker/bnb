@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Route } from '@angular/router';
-import { AccommodationComponent } from './components/accommodation/accommodation.component';
+import { Route, RouterModule } from '@angular/router';
+import { AccommodationContainerComponent } from './components/accommodation-container/accommodation-container.component';
 import { RoomContainerComponent } from './components/room-container/room-container.component';
 
 const routes: Route[] = [
@@ -10,7 +10,7 @@ const routes: Route[] = [
   },
   {
     path: '',
-    component: AccommodationComponent,
+    component: AccommodationContainerComponent,
   }
 ];
 
@@ -20,4 +20,4 @@ const routes: Route[] = [
 })
 export class AccommodationRoutingModule { }
 
-export { routes }
+export { routes };
