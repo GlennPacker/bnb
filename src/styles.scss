@@ -9,6 +9,32 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+
+@font-face {
+  font-family: comfort;
+  src: url(assets/Comfort.ttf);
+}
+
+@font-face {
+  font-family: play;
+  src: url(assets/Play-Regular.ttf);
+}
+
+.nav-item {
+  font-family: comfort;
+  font-size: 16px;
+}
+
+.logo {
+  font-family: play;
+  font-size: 25px;
+}
+
+
+.color-primary {
+  color: #61a8d6;
+}
+
 $bnbPrimary: (
   50: #d7eaf6,
   100: #a0cae7,
@@ -71,6 +97,10 @@ $bnb-accent: mat.define-palette($bnbSecondary, 400, 100, 600);
 
 .background-secondary {
   background-color: #f8d145;
+}
+
+.color-secondary {
+  color: #f8d145;
 }
 
 // The warn palette is optional (defaults to red).

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -30,7 +30,7 @@ export class NavComponent implements OnInit {
     this.responsive.observe([   
       // Breakpoints.HandsetPortrait,
       // Breakpoints.Handset
-      
+      Breakpoints.Small,
       Breakpoints.XSmall
       ])
       .subscribe(result => {

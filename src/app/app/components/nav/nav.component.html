@@ -1,6 +1,6 @@
 <mat-toolbar color="primary" *ngIf="!isPhone">
   <a
-    class="header-logo" 
+    class="header-logo logo" 
     routerLink="/"
   >
     Vue De Vallon
@@ -10,6 +10,7 @@
   <a 
     *ngFor="let route of routes"
     mat-button 
+    class="nav-item"
     [routerLink]="route.url" 
     routerLinkActive="active" 
     ariaCurrentWhenActive="page"
@@ -44,6 +45,7 @@
     mat-menu-item
     *ngFor="let route of routes"
     (click)="navClick(route.url)"
+    class="nav-item"
   >
     {{ route.label }}
   </button>

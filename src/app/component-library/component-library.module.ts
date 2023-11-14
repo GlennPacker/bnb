@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { FieldPickerComponent } from './field-picker/field-picker.component';
+import { FooterComponent } from './footer/footer.component';
 import { InputComponent } from './input/input.component';
 import { LocaleSwitcherComponent } from './locale-switcher/locale-switcher.component';
 
@@ -12,7 +13,8 @@ import { LocaleSwitcherComponent } from './locale-switcher/locale-switcher.compo
     LocaleSwitcherComponent,
     InputComponent,
     CheckboxComponent,
-    FieldPickerComponent
+    FieldPickerComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -23,6 +25,7 @@ import { LocaleSwitcherComponent } from './locale-switcher/locale-switcher.compo
   exports: [
     CheckboxComponent,
     FieldPickerComponent,
+    FooterComponent,
     InputComponent,
     LocaleSwitcherComponent,
   ]
