@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { Observable, map } from 'rxjs';
 import Accommodation from '../../models/Accommodation';
-import { AccommodationService } from '../../services/accommodation/accommodation.service';
 
 @Component({
   selector: 'app-accommodation-container',
@@ -9,12 +9,14 @@ import { AccommodationService } from '../../services/accommodation/accommodation
   styleUrls: ['./accommodation-container.component.scss']
 })
 export class AccommodationContainerComponent implements OnInit {
+  
   accommodation$: Observable<Accommodation[]> | undefined;
 
-  constructor(private accommodationService: AccommodationService) {
-    
-  }
+  constructor(
+    private activatedRoute: ActivatedRoute,
+  ) {}
+
   ngOnInit(): void {
-    this.accommodation$ = this.accommodationService.getAll();
+    this.accommodation$ = this.activatedRoute.data.pipe(map(data => data.accommodationList));
   }
 }

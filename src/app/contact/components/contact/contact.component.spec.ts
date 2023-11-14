@@ -1,5 +1,5 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ContactComponent } from './contact.component';
 
 describe('ContactComponent', () => {
@@ -8,6 +8,7 @@ describe('ContactComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      schemas:[NO_ERRORS_SCHEMA],
       declarations: [ContactComponent]
     });
     fixture = TestBed.createComponent(ContactComponent);

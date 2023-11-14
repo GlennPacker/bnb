@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { FieldPickerComponent } from './field-picker.component';
 
 describe('FieldPickerComponent', () => {
@@ -8,10 +10,15 @@ describe('FieldPickerComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FieldPickerComponent]
+      declarations: [FieldPickerComponent],
+      schemas:[NO_ERRORS_SCHEMA],
     });
     fixture = TestBed.createComponent(FieldPickerComponent);
     component = fixture.componentInstance;
+    component.schema = {
+      fieldData: [],
+      form: {} as FormGroup
+    }
     fixture.detectChanges();
   });
 

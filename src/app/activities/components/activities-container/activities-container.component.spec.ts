@@ -1,5 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { StoreModule } from '@ngrx/store';
 import { ActivitiesContainerComponent } from './activities-container.component';
 
 describe('ActivitiesContainerComponent', () => {
@@ -10,6 +11,7 @@ describe('ActivitiesContainerComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ActivitiesContainerComponent],
       schemas:[NO_ERRORS_SCHEMA],
+      imports: [StoreModule.forRoot({})]
     });
     fixture = TestBed.createComponent(ActivitiesContainerComponent);
     component = fixture.componentInstance;
