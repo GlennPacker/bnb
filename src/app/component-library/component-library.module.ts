@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../material/material.module';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { FieldPickerComponent } from './field-picker/field-picker.component';
@@ -21,6 +22,7 @@ import { LocaleSwitcherComponent } from './locale-switcher/locale-switcher.compo
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule
   ],
   exports: [
     CheckboxComponent,

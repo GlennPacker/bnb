@@ -30,11 +30,6 @@
   font-size: 25px;
 }
 
-
-.color-primary {
-  color: #61a8d6;
-}
-
 $bnbPrimary: (
   50: #d7eaf6,
   100: #a0cae7,
@@ -95,12 +90,20 @@ $bnb-primary: mat.define-palette($bnbPrimary, 200);
 $bnb-accent: mat.define-palette($bnbSecondary, 400, 100, 600);
 
 
+.background-primary {
+  background-color: #61a8d6;
+}
+
 .background-secondary {
   background-color: #f8d145;
 }
 
 .color-secondary {
   color: #f8d145;
+}
+
+.color-primary {
+  color: #61a8d6;
 }
 
 // The warn palette is optional (defaults to red).
@@ -124,7 +127,11 @@ $bnb-theme: mat.define-light-theme((
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  color: #53563d;
+}
 
 .text-center {
   display: flex;

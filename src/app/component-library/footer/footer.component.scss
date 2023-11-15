@@ -1,13 +1,72 @@
+.footer-spacer {
+  height: 14rem;
+}
+
 footer {
-    margin-top: 2rem;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: #2f220d;
-    color: white;
-    padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  height: 12rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  width: 100vw;
+  display: grid; 
+
+  h4.contact-title,
+  h3.footer-title {
+    margin: 0;
+    font-weight: 500;
+  }
 }
 
-h4 {
-
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
 }
+
+.footer-logo  {
+  margin-top: 1rem;
+  margin: 1rem;
+  padding: 2rem;
+  font-size: 20px;
+  display: inline-block;
+  border: 1px solid #f8d145;
+  border-radius: 50%;
+  border-bottom-style:dashed;
+  color: #f8d145;
+}
+
+@media screen and (max-width: 585px) {
+  footer {
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0 1fr; 
+    grid-template-areas: 
+      "logo logo"
+      "contact reservation"; 
+  }
+
+  .contact {
+    margin-left: 2rem;
+  }
+
+  .logo {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 586px) {
+  footer {
+    grid-template-columns: minmax(230px, 1fr) 1fr 1fr; 
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo contact reservation"; 
+  }
+}
+
+.logo { 
+  margin-top: .5rem;
+  grid-area: logo; 
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact { grid-area: contact; }
+.reservation { grid-area: reservation; }

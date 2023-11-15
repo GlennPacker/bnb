@@ -23,14 +23,15 @@ const routes: Routes = [
     path: 'contact', 
     loadChildren: () => import('../contact/contact.module').then(m => m.ContactModule) 
   },
-  {
-    path: '',
-    loadChildren: () => import('../welcome/welcome.module').then(m => m.WelcomeModule)
-  },
   { 
     path: 'booking', 
     loadChildren: () => import('../booking/booking.module').then(m => m.BookingModule) 
   },
+  {
+    path: '',
+    loadChildren: () => import('../welcome/welcome.module').then(m => m.WelcomeModule)
+  },
+  { path: 'home', redirectTo: ''},
   { path: '**', redirectTo: ''}
 ];
 
@@ -39,4 +40,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export { routes }
+export { routes };
