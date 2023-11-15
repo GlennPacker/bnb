@@ -17,6 +17,8 @@ export class AccommodationContainerComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.accommodation$ = this.activatedRoute.data.pipe(map(data => data.accommodationList));
+    this.accommodation$ = this.activatedRoute.data.pipe(
+      map(data => data.accommodationList)
+    );
   }
 }

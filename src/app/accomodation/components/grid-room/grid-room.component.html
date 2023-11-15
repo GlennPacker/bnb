@@ -1,0 +1,12 @@
+<div class="grid-room">
+  <div class="room-container">
+    <h3>{{ room.name }}</h3>
+    <ul *ngIf="room.bullets">
+      <li>{{ room.type }}</li>
+      <li *ngFor="let bp of room.bullets">
+        {{ bp }}
+      </li>
+    </ul>
+    <div>{{ room.description }}</div>
+  </div>
+</div>

@@ -6,6 +6,8 @@ import { MaterialModule } from '../material/material.module';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { FieldPickerComponent } from './field-picker/field-picker.component';
 import { FooterComponent } from './footer/footer.component';
+import { GridImageComponent } from './grid-image/grid-image.component';
+import { GridShieldComponent } from './grid-shield/grid-shield.component';
 import { InputComponent } from './input/input.component';
 import { LocaleSwitcherComponent } from './locale-switcher/locale-switcher.component';
 
@@ -15,7 +17,9 @@ import { LocaleSwitcherComponent } from './locale-switcher/locale-switcher.compo
     InputComponent,
     CheckboxComponent,
     FieldPickerComponent,
-    FooterComponent
+    FooterComponent,
+    GridImageComponent,
+    GridShieldComponent
   ],
   imports: [
     CommonModule,
@@ -30,6 +34,8 @@ import { LocaleSwitcherComponent } from './locale-switcher/locale-switcher.compo
     FooterComponent,
     InputComponent,
     LocaleSwitcherComponent,
+    GridImageComponent,
+    GridShieldComponent
   ]
 })
 export class ComponentLibraryModule { }
