@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { GridImageComponent } from './grid-image.component';
 
 describe('GridImageComponent', () => {
@@ -8,7 +9,8 @@ describe('GridImageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [GridImageComponent]
+      declarations: [GridImageComponent],
+      schemas:[NO_ERRORS_SCHEMA]
     });
     fixture = TestBed.createComponent(GridImageComponent);
     component = fixture.componentInstance;

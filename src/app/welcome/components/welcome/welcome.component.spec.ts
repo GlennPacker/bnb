@@ -1,5 +1,5 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { WelcomeComponent } from './welcome.component';
 
 describe('WelcomeComponent', () => {
@@ -8,7 +8,8 @@ describe('WelcomeComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [WelcomeComponent]
+      declarations: [WelcomeComponent],
+      schemas:[NO_ERRORS_SCHEMA]
     });
     fixture = TestBed.createComponent(WelcomeComponent);
     component = fixture.componentInstance;

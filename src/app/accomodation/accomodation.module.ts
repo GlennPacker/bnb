@@ -6,9 +6,9 @@ import { AccommodationRoutingModule } from './accomodation-routing.module';
 import { AccommodationContainerComponent } from './components/accommodation-container/accommodation-container.component';
 import { AccommodationComponent } from './components/accommodation/accommodation.component';
 import { AccomodationGridComponent } from './components/accomodation-grid/accomodation-grid.component';
+import { GridRoomComponent } from './components/grid-room/grid-room.component';
 import { RoomContainerComponent } from './components/room-container/room-container.component';
 import { RoomComponent } from './components/room/room.component';
-import { GridRoomComponent } from './components/grid-room/grid-room.component';
 
 @NgModule({
   declarations: [
