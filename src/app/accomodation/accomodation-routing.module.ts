@@ -24,4 +24,3 @@ const routes: Route[] = [
 export class AccommodationRoutingModule { }
 
 export { routes };
-

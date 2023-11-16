@@ -1,0 +1,12 @@
+<div class="facility-grid">
+  <mat-icon 
+    class="icon"
+    [attr.aria-hidden]="!facility.tooltip" 
+    [fontIcon]="facility.icon"
+    [matTooltip]="facility.tooltip"
+    [attr.aria-label]="facility.tooltip"
+  />
+  <div [matTooltip]="facility.tooltip">
+    {{ facility.description }}
+  </div>
+</div>

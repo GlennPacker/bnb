@@ -9,6 +9,8 @@ import { AccomodationGridComponent } from './components/accomodation-grid/accomo
 import { GridRoomComponent } from './components/grid-room/grid-room.component';
 import { RoomContainerComponent } from './components/room-container/room-container.component';
 import { RoomComponent } from './components/room/room.component';
+import { FacilitiesComponent } from './components/facilities/facilities.component';
+import { FacilityComponent } from './components/facility/facility.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { RoomComponent } from './components/room/room.component';
     RoomComponent,
     AccommodationContainerComponent,
     AccomodationGridComponent,
-    GridRoomComponent
+    GridRoomComponent,
+    FacilitiesComponent,
+    FacilityComponent
   ],
   imports: [
     CommonModule,
