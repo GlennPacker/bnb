@@ -30,7 +30,5 @@ describe('GridShieldComponent', () => {
   it('should show the title', () => {
     const deA = fixture.debugElement.query(By.css('h4'));
     expect(deA.nativeElement.textContent).toContain('ABC');
-
-    expect(component).toBeTruthy();
   });
 });
