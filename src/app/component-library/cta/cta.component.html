@@ -1,0 +1,21 @@
+<div *ngIf="cta"
+     class="cta-container">
+  <h2 class="title background-primary">
+    {{cta.title}}
+  </h2>
+  <img [src]="cta.src"
+       [alt]="cta.alt" />
+  <div *ngIf="cta.facilities"
+       class="icon-bar">
+    <mat-icon *ngFor="let facility of cta.facilities"
+              class="icon"
+              [fontIcon]="facility.icon"
+              [matTooltip]="facility.tooltip || facility.description"
+              [attr.aria-label]="facility.tooltip || facility.description" />
+  </div>
+  <div class="cta-description">
+    <p *ngFor="let p of (cta.paras || [])">
+      {{p}}
+    </p>
+  </div>
+</div>

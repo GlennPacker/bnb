@@ -12,7 +12,7 @@ module.exports = {
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates"
+        "plugin:@angular-eslint/template/process-inline-templates",
       ],
       "rules": {
         'no-multiple-empty-lines': ["error", { "max": 2, "maxEOF": 0 }],
@@ -38,7 +38,7 @@ module.exports = {
             "prefix": "app",
             "style": "kebab-case"
           }
-        ]
+        ],
       }
     },
     {

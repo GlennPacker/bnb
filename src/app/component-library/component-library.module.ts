@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../material/material.module';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { CtaComponent } from './cta/cta.component';
 import { FieldPickerComponent } from './field-picker/field-picker.component';
 import { FooterComponent } from './footer/footer.component';
 import { GridImageComponent } from './grid-image/grid-image.component';
@@ -19,7 +20,8 @@ import { LocaleSwitcherComponent } from './locale-switcher/locale-switcher.compo
     FieldPickerComponent,
     FooterComponent,
     GridImageComponent,
-    GridShieldComponent
+    GridShieldComponent,
+    CtaComponent
   ],
   imports: [
     CommonModule,
@@ -30,6 +32,7 @@ import { LocaleSwitcherComponent } from './locale-switcher/locale-switcher.compo
   ],
   exports: [
     CheckboxComponent,
+    CtaComponent,
     FieldPickerComponent,
     FooterComponent,
     InputComponent,

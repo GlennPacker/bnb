@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { activityIcon } from 'src/app/core/models/activityIcons';
 import Facility from '../../models/Facility';
 
 @Component({
@@ -7,25 +8,22 @@ import Facility from '../../models/Facility';
   styleUrls: ['./facilities.component.scss']
 })
 export class FacilitiesComponent {
-  facilities: Facility[] = [ {
+  facilities: Facility[] = [{
     description: 'Hot Tub',
     icon: 'hot_tub'
   }, {
     description: 'Pool',
     icon: 'pool'
-  }, {
-    description: 'WIFI',
-    icon: 'wifi'
-  }, {
-    description: 'Stunning Views',
-    icon: 'landscape'
-  }, {
+  },
+  activityIcon.wifi,
+  activityIcon.views,
+  {
     description: 'Pets allowed',
     tooltip: 'Dogs must be friendly and get on well with other people and animals. We reserve the right of refusal.',
     icon: 'pets'
   }, {
     description: 'Cards and Games',
-    icon: 'toys_and_games'
+    icon: 'casino'
   }, {
     description: 'Tea & Coffee making facilities',
     icon: 'coffee'
@@ -67,31 +65,26 @@ export class FacilitiesComponent {
 
 
   sports = [{
-      description: 'Paragliding',
-      tooltip: 'Must have a license and insurance',
-      icon: 'paragliding'
-    }, {
-      description: 'Kayaking',
-      icon: 'kayaking'
-    },{
-      description: 'Basketball and hoop',
-      icon: 'sports_basketball'
-    }, {
-      description: 'Windsurfing, Wind SUP',
-      icon: 'kitesurfing'
-    }, {
-      description: 'Wind foil and wing foil',
-      icon: 'surfing'
-    },{
-      description: 'Small Gym',
-      icon: 'fitness_center'
-    },{
-      description: 'Hiking',
-      icon: 'hiking'
-    }, {
-      description: 'SUP',
-      tooltip: 'Stand Up Paddleboard',
-      icon: 'toggle_off'
-    },
+    ...activityIcon.paragliding,
+    tooltip: 'Must have a license and insurance',
+  },
+  activityIcon.kayaking,
+  {
+    ...activityIcon.basketball,
+    description: 'Basketball and hoop',
+  },
+  activityIcon.windsurfing,
+  activityIcon.foil,
+  {
+    description: 'Small Gym',
+    icon: 'fitness_center'
+  },
+  activityIcon.hiking,
+  {
+    ...activityIcon.sup,
+    description: 'SUP',
+    tooltip: 'Stand Up Paddleboard',
+  },
+  activityIcon.cycling
   ]
 }

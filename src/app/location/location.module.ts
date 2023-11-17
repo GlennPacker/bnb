@@ -1,10 +1,13 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
-import { LocationRoutingModule } from './location-routing.module';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { CoreModule } from '../core/core.module';
 import { LocationContainerComponent } from './components/location-container/location-container.component';
 import { LocationComponent } from './components/location/location.component';
-
+import { LocationRoutingModule } from './location-routing.module';
+import * as fromStore from './state';
 
 @NgModule({
   declarations: [
@@ -13,7 +16,10 @@ import { LocationComponent } from './components/location/location.component';
   ],
   imports: [
     CommonModule,
-    LocationRoutingModule
+    CoreModule,
+    LocationRoutingModule,
+    EffectsModule.forFeature(fromStore.effects),
+    StoreModule.forFeature('location', fromStore.locationsReducer)
   ]
 })
 export class LocationModule { }

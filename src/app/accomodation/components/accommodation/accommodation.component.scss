@@ -2,14 +2,27 @@
   display: grid;
   grid-template-columns: 2rem auto;
 }
+
 .accommodation-container {
   width: 60vw;
   margin-left: auto;
   margin-right: auto;
 }
 
+h1,
+h2 {
+  margin-top: 2rem;
+  margin-left: 20vw;
+}
+
 @media screen and (max-width: 700px) {
   .accommodation-container {
     width: 80vw;
   }
+
+  h1,
+  h2 {
+    margin-left: 10vw;
+  }
 }
+

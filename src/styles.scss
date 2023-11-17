@@ -154,7 +154,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 60vw;
-  margin-left: 20vw;
+  margin-left: auto;
+  margin-right: auto;
   box-shadow: 3px 3px 3px #fceab0;
   border-top: 1px solid #ddd;
   border-left: 1px solid #ddd;
@@ -193,7 +194,6 @@ body {
 
 @media screen and (max-width: 700px) {
   .app-grid {
-    margin-left: 10vw;
     width: 80vw;
   
     .item {
@@ -231,4 +231,16 @@ body {
   .hidden-xs {
     display: none;
   }
+}
+
+h2.title {
+  font-weight: 400;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
 }

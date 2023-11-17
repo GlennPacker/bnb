@@ -1,4 +1,8 @@
-<mat-toolbar color="primary" *ngIf="!isPhone">
+<mat-toolbar 
+  color="primary" 
+  *ngIf="!isPhone"
+  class="no-print"
+>
   <a
     class="header-logo logo" 
     routerLink="/"
@@ -26,7 +30,11 @@
   />
 </mat-toolbar>
 
-<mat-toolbar color="primary" *ngIf="isPhone">
+<mat-toolbar 
+  color="primary" 
+  *ngIf="isPhone"
+  class="no-print"
+>
   <a
     class="header-logo" 
     routerLink="/"

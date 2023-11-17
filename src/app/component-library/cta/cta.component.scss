@@ -1,0 +1,39 @@
+.cta-container {
+  padding: 0;
+  border: 1px solid rgb(221, 221, 221);
+
+  h2 {
+    padding: 1rem 0;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .cta-description {
+    padding: 10px;
+  }
+
+  .icon-bar {
+    border-bottom: 1px solid rgb(221, 221, 221);
+    padding: 0 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 1760px) and (min-width: 500px) {
+  .icon-bar {
+    min-height: 4rem;
+  }
+}
