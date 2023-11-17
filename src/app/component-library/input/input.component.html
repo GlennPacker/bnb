@@ -1,16 +1,12 @@
-<div 
-  class="input-height"
-  [formGroup]="form"
->
-  <mat-form-field class="input-layout"> 
-    <mat-label>{{ label || prop }}</mat-label> 
-    <input 
-      matInput 
-      [formControlName]="prop" 
-      (ngModelChange)="emitValue($event)"
-    > 
+<div class="input-height"
+     [formGroup]="form">
+  <mat-form-field class="input-layout">
+    <mat-label>{{ label || prop }}</mat-label>
+    <input matInput
+           [formControlName]="prop"
+           (ngModelChange)="emitValue($event)">
     <mat-hint>
-      {{ hint }} 
+      {{ hint }}
     </mat-hint>
     <mat-error *ngIf="(form.get(prop).touched || form.get(prop).dirty) && !form.get(prop).valid">
       <div *ngIf="form.get(prop).errors?.required">
@@ -20,6 +16,6 @@
       <div *ngIf="validationError">
         {{ validationError }}
       </div>
-    </mat-error> 
+    </mat-error>
   </mat-form-field>
 </div>

@@ -1,1 +1,3 @@
-<app-location [locations]="locations$ | async">
+<app-location [locations]="locations$ | async"
+              [searchForm]="searchForm"
+              (updated)="formUpdated()">

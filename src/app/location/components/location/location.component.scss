@@ -10,6 +10,13 @@ h2 {
   padding-left: 1rem;
 }
 
+.search-bar {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+}
+
 .location-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -45,4 +52,27 @@ h2 {
   .location-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
+}
+
+.search-icon {
+  position: relative;
+  bottom: 100px;
+  border-radius: 50%;
+  padding: 14px;
+  // border: 1px solid rgb(221, 221, 221);
+  right: 60px;
+  background-color: white;
+  font-size: 50px;
+  line-height: 26px;
+  padding-right: 40px;
+}
+
+.search-icon::after {
+  content: ' ';
+  // padding: 40px;
+  padding: 30px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 50%;
+  position: relative;
+  right: 50px;
 }

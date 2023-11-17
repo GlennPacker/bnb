@@ -15,7 +15,7 @@ const data = [{
     'Sleeps 2',
   ],
   img: '/assets/vue de vallon bersac.jpg',
-  alt: `Twin room in Chambre D'hôte in Bersac near a20 Limoges` ,
+  alt: `Twin room in Chambre D'hôte in Bersac near a20 Limoges`,
 }, {
   room: 2,
   type: RoomType.double,
@@ -27,7 +27,7 @@ const data = [{
     'Sleeps 2',
   ],
   img: '/assets/vue de vallon bersac.jpg',
-  alt: `Double room in Chambre D'hôte in Bersac near a20 Limoges, Haute Vienne` ,
+  alt: `Double room in Chambre D'hôte in Bersac near a20 Limoges, Haute Vienne`,
 }, {
   room: 3,
   type: RoomType.family,
@@ -39,7 +39,7 @@ const data = [{
     'Sleeps 4',
   ],
   img: '/assets/vue de vallon bersac.jpg',
-  alt: `Family room in Chambre D'hôte near A20 Limoges, Haute Vienne` ,
+  alt: `Family room in Chambre D'hôte near A20 Limoges, Haute Vienne`,
 }, {
   room: 4,
   type: RoomType.double,
@@ -51,7 +51,7 @@ const data = [{
     'Sleeps 2',
   ],
   img: '/assets/vue de vallon bersac.jpg',
-  alt: `Double room in Chambre D'hôte in Bersac Sur Ravailier near Limoges` ,
+  alt: `Double room in Chambre D'hôte in Bersac Sur Ravailier near Limoges`,
 }, {
   room: 5,
   type: RoomType.family,
@@ -63,7 +63,7 @@ const data = [{
     'Sleeps 5',
   ],
   img: '/assets/vue de vallon bersac.jpg',
-  alt: `Large FAmily room in Chambre D'hôte in Bersac by the A20 near Limoges` ,
+  alt: `Large FAmily room in Chambre D'hôte in Bersac by the A20 near Limoges`,
 }] as Accommodation[];
 
 @Injectable({
@@ -81,9 +81,6 @@ export class AccommodationService {
     return this.getAll()
       .pipe(
         map(((rooms: Accommodation[]) => rooms.find(data => data.room === roomNo)))
-      )
-      .pipe(
-        tap(data => console.log('Rooms:', JSON.stringify(data))),
       )
   }
 }

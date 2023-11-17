@@ -13,19 +13,20 @@ export class InputComponent {
   @Input() public hint: string | null;
   @Input() public label: string | null;
   @Input() public prop: string;
+  @Input() public placeholder: string;
   @Input() public validationRulesAndMessages: ValidationRuleAndMessage[]
   @Output() updated = new EventEmitter<FieldUpdated>()
 
   public get customRules() {
     return this.validationRulesAndMessages ?
-      this.validationRulesAndMessages.filter(r => r.message): 
+      this.validationRulesAndMessages.filter(r => r.message) :
       [];
   }
 
   public get validationError() {
     if (!this.form || !this.form.get(this.prop).errors || !this.customRules.length) return '';
 
-    return this.customRules.reduce((agg, {rule, message}) => {
+    return this.customRules.reduce((agg, { rule, message }) => {
       if (agg) return agg;
 
       const errors = this.form.get(this.prop).errors

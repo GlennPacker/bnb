@@ -34,8 +34,5 @@ export class ActivityService {
       .pipe(
         map(((rooms: Activity[]) => rooms.find(data => data.name === name)))
       )
-      .pipe(
-        tap(data => console.log('Rooms:', JSON.stringify(data))),
-      )
   }
 }

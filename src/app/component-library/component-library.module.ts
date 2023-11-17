@@ -11,6 +11,7 @@ import { GridImageComponent } from './grid-image/grid-image.component';
 import { GridShieldComponent } from './grid-shield/grid-shield.component';
 import { InputComponent } from './input/input.component';
 import { LocaleSwitcherComponent } from './locale-switcher/locale-switcher.component';
+import { SelectComponent } from './select/select.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LocaleSwitcherComponent } from './locale-switcher/locale-switcher.compo
     FooterComponent,
     GridImageComponent,
     GridShieldComponent,
-    CtaComponent
+    CtaComponent,
+    SelectComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +40,8 @@ import { LocaleSwitcherComponent } from './locale-switcher/locale-switcher.compo
     InputComponent,
     LocaleSwitcherComponent,
     GridImageComponent,
-    GridShieldComponent
+    GridShieldComponent,
+    SelectComponent
   ]
 })
 export class ComponentLibraryModule { }

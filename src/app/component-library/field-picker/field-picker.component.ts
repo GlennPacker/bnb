@@ -10,7 +10,7 @@ import SchemaData from '../models/schemaData';
 export class FieldPickerComponent {
   @Input() public schema: SchemaData;
   @Output() updated = new EventEmitter<FieldUpdated>()
-  
+
 
   public emitValue(update: FieldUpdated) {
     this.updated.emit(update);

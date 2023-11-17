@@ -1,20 +1,24 @@
-<div *ngFor="let field of schema.fieldData">
-  <app-input
-    *ngIf="field.control === 'input'"
-    [form]="schema.form"
-    [hint]="field.hint"
-    [label]="field.label"
-    [prop]="field.prop"
-    [validationRulesAndMessages]="field.validationRules"
-    (updated)="emitValue($event)"
-  />
+<ng-container *ngFor="let field of schema.fieldData">
+  <app-input *ngIf="field.control === 'input'"
+             [form]="schema.form"
+             [hint]="field.hint"
+             [label]="field.label"
+             [prop]="field.prop"
+             [validationRulesAndMessages]="field.validationRules"
+             (updated)="emitValue($event)" />
 
-  <app-checkbox
-    *ngIf="field.control === 'checkbox'"
-    [form]="schema.form"
-    [hint]="field.hint"
-    [label]="field.label"
-    [prop]="field.prop"
-    (updated)="emitValue($event)"
-  />
-</div>
+  <app-select *ngIf="field.control === 'select'"
+              [form]="schema.form"
+              [hint]="field.hint"
+              [label]="field.label"
+              [prop]="field.prop"
+              [options]="field.options"
+              (updated)="emitValue($event)" />
+
+  <app-checkbox *ngIf="field.control === 'checkbox'"
+                [form]="schema.form"
+                [hint]="field.hint"
+                [label]="field.label"
+                [prop]="field.prop"
+                (updated)="emitValue($event)" />
+</ng-container>

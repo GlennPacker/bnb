@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { CoreModule } from '../core/core.module';
@@ -17,6 +18,8 @@ import * as fromStore from './state';
   imports: [
     CommonModule,
     CoreModule,
+    FormsModule,
+    ReactiveFormsModule,
     LocationRoutingModule,
     EffectsModule.forFeature(fromStore.effects),
     StoreModule.forFeature('location', fromStore.locationsReducer)

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of, tap } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { activityIcon } from 'src/app/core/models/activityIcons';
 import Location from '../models/location';
 
@@ -97,8 +97,6 @@ const data: Location[] = [{
 })
 export class LocationService {
   public get(): Observable<Location[]> {
-    return of(data).pipe(
-      tap(data => console.log('Locations:', JSON.stringify(data))),
-    );
+    return of(data);
   }
 }

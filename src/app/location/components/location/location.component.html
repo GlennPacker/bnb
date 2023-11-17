@@ -1,10 +1,30 @@
 <h1>
   Vue De Vallon Chambre D'Hôte Haute Vienne
 </h1>
-<h2 class="title">
-  Places to go
-</h2>
+<form (ngSubmit)="emitValue()"
+      [formGroup]="searchForm">
+  <div class="search-bar">
+
+    <h2 class="title">
+      Places to go
+    </h2>
+
+    <app-input [form]="searchForm"
+               prop="searchTerm"
+               label="Search"
+               (updated)="emitValue($event)" />
+
+    <app-select [form]="searchForm"
+                label="Activity"
+                prop="facility"
+                [options]="facilities"
+                (updated)="emitValue($event)" />
+
+
+  </div>
+</form>
 
 <div class="location-grid">
-  <app-cta *ngFor="let location of locations" [cta]="location" />
+  <app-cta *ngFor="let location of locations"
+           [cta]="location" />
 </div>

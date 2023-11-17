@@ -1,0 +1,25 @@
+<div>
+  <div class="input-height"
+       [formGroup]="form">
+
+    <mat-form-field class="input-layout">
+      <mat-label>{{ label || prop }}</mat-label>
+      <mat-select [formControlName]="prop"
+                  (ngModelChange)="emitValue($event)">
+        <!-- @for (option of options; track option) { -->
+        <mat-option *ngFor="let option of options"
+                    [value]="option.value">
+          {{option.label}}
+        </mat-option>
+        <!-- } -->
+      </mat-select>
+      <!-- 
+      <input matInput
+             [formControlName]="prop"
+             (ngModelChange)="emitValue($event)"> -->
+      <mat-hint>
+        {{ hint }}
+      </mat-hint>
+    </mat-form-field>
+  </div>
+</div>
