@@ -16,6 +16,7 @@
 
   .cta-description {
     padding: 10px;
+    overflow: auto;
   }
 
   .icon-bar {
@@ -35,5 +36,41 @@
 @media screen and (max-width: 1760px) and (min-width: 500px) {
   .icon-bar {
     min-height: 4rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 649px) {
+  .cta-description {
+    height: 9rem;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 749px) {
+  .cta-description {
+    height: 7.75rem;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1500px) {
+  .cta-description {
+    height: 9rem;
+  }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 2100px) {
+  .cta-description {
+    height: 8rem;
+  }
+}
+
+@media screen and (min-width: 2101px) and (max-width: 2500px) {
+  .cta-description {
+    height: 7rem;
+  }
+}
+
+@media screen and (min-width: 2501px) {
+  .cta-description {
+    height: 6rem;
   }
 }

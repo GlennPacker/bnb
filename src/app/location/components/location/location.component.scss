@@ -11,10 +11,11 @@ h2 {
 }
 
 .search-bar {
-  display: grid;
+  display: block;
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 10px;
+  width: calc(100vw - 2.5rem);
 }
 
 .location-grid {
@@ -37,6 +38,10 @@ h2 {
 }
 
 @media screen and (min-width: 750px) {
+  .search-bar {
+    display: grid;
+  }
+  
   .location-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }

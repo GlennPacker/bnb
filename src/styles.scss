@@ -8,7 +8,6 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
-
 @font-face {
   font-family: comfort;
   src: url(assets/Comfort.ttf);
@@ -79,13 +78,11 @@ $bnbSecondary: (
   )
 );
 
-
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $bnb-primary: mat.define-palette($bnbPrimary, 200);
 $bnb-accent: mat.define-palette($bnbSecondary, 400, 100, 600);
-
 
 .background-primary {
   background-color: #61a8d6;
@@ -144,7 +141,6 @@ body {
 .pointer {
   cursor: pointer;
 }
-
 
 .app-grid {
   border-radius: 8px;
@@ -240,7 +236,6 @@ h2.title {
 }
 
 @media print {
-
   .no-print,
   .no-print * {
     display: none !important;

@@ -1,4 +1,12 @@
 export const activityIcon = {
+  atm: {
+    description: 'Cash Machine',
+    icon: 'atm'
+  },
+  bar: {
+    description: 'Bars and Restaurants',
+    icon: 'nightlife'
+  },
   basketball: {
     description: 'Basketball',
     icon: 'sports_basketball'
@@ -6,6 +14,14 @@ export const activityIcon = {
   beach: {
     description: 'Beach',
     icon: 'icecream'
+  },
+  boulangerie: {
+    description: 'Boulangerie / Bakery',
+    icon: 'bakery_dining'
+  },
+  coffee: {
+    description: 'Coffee Shop',
+    icon: 'local_cafe'
   },
   cycling: {
     description: 'Cycling',
@@ -27,6 +43,10 @@ export const activityIcon = {
     description: 'Kayaking',
     icon: 'kayaking'
   },
+  localTowns: {
+    description: 'Local Towns',
+    icon: 'location_city'
+  },
   paragliding: {
     description: 'Paragliding',
     icon: 'paragliding'
@@ -38,6 +58,14 @@ export const activityIcon = {
   pets: {
     description: 'Dog Walking',
     icon: 'pets'
+  },
+  restaurant: {
+    description: 'Restaurants',
+    icon: 'restaurant'
+  },
+  shopping: {
+    description: 'Shopping',
+    icon: 'shopping_cart'
   },
   sup: {
     description: 'Stand Up Paddleboard',
@@ -58,5 +86,5 @@ export const activityIcon = {
   windsurfing: {
     description: 'Windsurfing and Wind Sup',
     icon: 'kitesurfing'
-  },
+  }
 }
