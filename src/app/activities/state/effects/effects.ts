@@ -12,12 +12,12 @@ export default {}
 
 @Injectable()
 export class ActivityEffects {
-  loadActivities$ = createEffect(() => 
+  loadActivities$ = createEffect(() =>
     this.actions$.pipe(
       ofType(actions.activitiesLoad),
       tap(() => console.log('Action One Dispatched')),
       switchMap(() => {
-        return this.activityService.getAll().pipe(
+        return this.activityService.get().pipe(
           map((activities: Activity[]) => {
             return actions.activitiesLoaded({ activities });
           }),

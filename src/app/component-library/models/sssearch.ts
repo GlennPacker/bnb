@@ -1,4 +1,4 @@
-export default class LocationSearch {
+export default class Search {
   facility: string;
   searchTerm: string;
 }

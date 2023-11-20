@@ -1,6 +1,11 @@
 import { ActivityType } from './activityType';
 
 export default class Activity {
+  alt: string;
   activityType: ActivityType;
-  name: string;
+  icon: string;
+  id: number;
+  src: string;
+  title: string;
+  paras: string[];
 }

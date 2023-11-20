@@ -7,7 +7,7 @@ export const locationList = createSelector(selectFeature, (state: fromStore.Stat
   return state && state.locations;
 });
 
-export const locationSearchedList = createSelector(selectFeature, (state: fromStore.State) => {
+export const SearchedList = createSelector(selectFeature, (state: fromStore.State) => {
   if (!state) return []
   if (!state.searchTerm || (!state.searchTerm.facility && !state.searchTerm.searchTerm)) return state.locations;
 

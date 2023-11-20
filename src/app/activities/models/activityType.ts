@@ -1,4 +1,5 @@
 export enum ActivityType {
-  Craft = 'craft',
-  WaterSports = 'waterSports'
+  Craft = 'Craft',
+  WaterSports = 'Water Sports',
+  Others = 'Others'
 }

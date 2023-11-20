@@ -11,6 +11,7 @@ import { GridImageComponent } from './grid-image/grid-image.component';
 import { GridShieldComponent } from './grid-shield/grid-shield.component';
 import { InputComponent } from './input/input.component';
 import { LocaleSwitcherComponent } from './locale-switcher/locale-switcher.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 import { SelectComponent } from './select/select.component';
 
 @NgModule({
@@ -23,7 +24,9 @@ import { SelectComponent } from './select/select.component';
     GridImageComponent,
     GridShieldComponent,
     CtaComponent,
-    SelectComponent
+    SearchBarComponent,
+    SelectComponent,
+    SearchBarComponent
   ],
   imports: [
     CommonModule,
@@ -41,6 +44,7 @@ import { SelectComponent } from './select/select.component';
     LocaleSwitcherComponent,
     GridImageComponent,
     GridShieldComponent,
+    SearchBarComponent,
     SelectComponent
   ]
 })

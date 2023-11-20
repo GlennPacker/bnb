@@ -112,7 +112,7 @@ const data: Location[] = [{
     activityIcon.kayaking,
     activityIcon.parking,
     activityIcon.pets,
-    activityIcon.views,    
+    activityIcon.views,
   ],
   paras: [
     `Lac du pont à l'Age is 8mins away from Vue de Vallon and is our closest big lake.`,
@@ -128,7 +128,7 @@ const data: Location[] = [{
     activityIcon.paragliding,
     activityIcon.parking,
     activityIcon.pets,
-    activityIcon.views,  
+    activityIcon.views,
   ],
   paras: [
     `Saint Sulpice Laurière – Bois des Echelles is 10mins drive from Vue de Vallon and offers great views over the valley below.`,
@@ -144,7 +144,7 @@ const data: Location[] = [{
     activityIcon.hiking,
     activityIcon.parking,
     activityIcon.pets,
-    activityIcon.views,  
+    activityIcon.views,
   ],
   paras: [
     `Saint Sulpice Laurière is 9mins from Vue de Vallon and a favourite for many fishing.`,
@@ -182,13 +182,13 @@ const data: Location[] = [{
     activityIcon.sup,
     activityIcon.swimming,
     activityIcon.restaurant,
-    activityIcon.views,    
+    activityIcon.views,
   ],
   paras: [
     `Le Turion at Saint Laurent les Églises is 24mins drive away and offers great views.`,
     `It is a great spot for water sports, hiking, dogs and a great restaurant 'ESAT Pont du Dognon'.`
   ]
-}, 
+},
 
 {
   id: 11,
@@ -214,13 +214,13 @@ const data: Location[] = [{
     activityIcon.hiking,
     activityIcon.parking,
     activityIcon.pets,
-    activityIcon.views,   
+    activityIcon.views,
   ],
   paras: [
     `Étang de la Brousse in Marsac is a 18mins away and great lake. This spot is good for hiking, dog walks and fishing`
   ]
 }
-, {
+  , {
   id: 13,
   alt: 'Le Taurion at Châtelus-le-Marcheix',
   src: '/assets/le Marcheix le Taurion river.jpg',
@@ -257,7 +257,7 @@ const data: Location[] = [{
     activityIcon.restaurant,
     activityIcon.sup,
     activityIcon.swimming,
-    activityIcon.views,  
+    activityIcon.views,
     activityIcon.windsurfing
   ],
   paras: [

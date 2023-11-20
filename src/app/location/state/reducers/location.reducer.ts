@@ -1,12 +1,12 @@
 import { createReducer, on } from '@ngrx/store';
+import Search from '../../../component-library/models/sssearch';
 import Activity from '../../models/location';
-import LocationSearch from '../../models/locationSearch';
 import * as actions from '../actions';
 
 export interface State {
   error: Error,
   locations: Activity[];
-  searchTerm: LocationSearch;
+  searchTerm: Search;
 }
 
 export const initialState: State = {
@@ -25,7 +25,7 @@ export const locationsReducer = createReducer(
     }
   }),
 
-  on(actions.setLocationSearchTerms, (state, { searchTerm }) => {
+  on(actions.setSearchTerms, (state, { searchTerm }) => {
     const search = {
       ...searchTerm,
       searchTerm: (searchTerm.searchTerm || '').toLocaleLowerCase()

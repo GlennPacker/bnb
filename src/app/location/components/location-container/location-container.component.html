@@ -1,3 +1,2 @@
 <app-location [locations]="locations$ | async"
-              [searchForm]="searchForm"
-              (updated)="formUpdated()">
+              (searchUpdated)="search($event)">

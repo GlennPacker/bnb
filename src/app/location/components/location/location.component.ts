@@ -1,7 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import FieldUpdated from 'src/app/component-library/models/fieldUpdated';
+import Option from 'src/app/component-library/models/option';
 import { activityIcon } from 'src/app/core/models/activityIcons';
+import Search from '../../../component-library/models/sssearch';
 import Location from '../../models/location';
 
 @Component({
@@ -12,9 +14,10 @@ import Location from '../../models/location';
 export class LocationComponent {
   @Input() public locations: Location[];
   @Input() public searchForm: FormGroup;
-  @Output() updated = new EventEmitter<FieldUpdated>()
+  @Output() public searchUpdated = new EventEmitter<Search>();
+  @Output() public updated = new EventEmitter<FieldUpdated>()
 
-  public facilities = [
+  public facilities: Option[] = [
     {
       label: 'All',
       value: ''
@@ -30,5 +33,9 @@ export class LocationComponent {
 
   public emitValue(update?: FieldUpdated) {
     this.updated.emit(update);
+  }
+
+  public search(searchTerm: Search) {
+    this.searchUpdated.emit(searchTerm);
   }
 }

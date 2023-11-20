@@ -1,6 +1,6 @@
 import { createAction, props } from '@ngrx/store';
+import Search from '../../component-library/models/sssearch';
 import Location from '../models/location';
-import LocationSearch from '../models/locationSearch';
 
 export const locationsLoad = createAction(
   '[location] load list',
@@ -11,9 +11,9 @@ export const locationsLoaded = createAction(
   props<{ locations: Location[] }>()
 );
 
-export const setLocationSearchTerms = createAction(
+export const setSearchTerms = createAction(
   '[location] Set Location Search Terms',
-  props<{ searchTerm: LocationSearch }>()
+  props<{ searchTerm: Search }>()
 );
 
 export const setError = createAction(

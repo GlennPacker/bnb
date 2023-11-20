@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Store, select } from '@ngrx/store';
-import LocationSearch from '../../models/locationSearch';
+import Search from '../../../component-library/models/sssearch';
 import * as fromStore from '../../state';
 
 @Component({
@@ -10,25 +9,17 @@ import * as fromStore from '../../state';
   styleUrls: ['./location-container.component.scss']
 })
 export class LocationContainerComponent implements OnInit {
-  public locations$ = this.store.pipe(select(fromStore.locationSearchedList));
-  public search: LocationSearch;
-  public searchForm: FormGroup;
+  public locations$ = this.store.pipe(select(fromStore.SearchedList));
 
   constructor(
-    private fb: FormBuilder,
     private store: Store<fromStore.State>
   ) { }
 
-  public ngOnInit(): void {
-    this.store.dispatch(fromStore.locationsLoad());
-
-    this.searchForm = this.fb.group({
-      facility: new FormControl(),
-      searchTerm: new FormControl(),
-    });
+  public search(searchTerm: Search): void {
+    this.store.dispatch(fromStore.setSearchTerms({ searchTerm }));
   }
 
-  public formUpdated(): void {
-    this.store.dispatch(fromStore.setLocationSearchTerms({ searchTerm: this.searchForm.value }));
+  public ngOnInit(): void {
+    this.store.dispatch(fromStore.locationsLoad());
   }
 }

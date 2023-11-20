@@ -1,3 +1,13 @@
-<p>activities works!</p>
+<h1>
+  Vue De Vallon Chambre D'Hôte - Activities
+</h1>
 
-{{ activities | json }}
+<app-search-bar title="Activities"
+                [searchCategories]="searchCategories"
+                (searchUpdated)="search($event)" />
+
+
+<div class="activity-grid">
+  <app-cta *ngFor="let activity of activities"
+           [cta]="activity" />
+</div>

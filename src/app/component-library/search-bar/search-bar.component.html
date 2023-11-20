@@ -1,0 +1,22 @@
+<div class="search-bar-container">
+  <form (ngSubmit)="search()"
+        [formGroup]="searchForm">
+
+    <div class="search-bar">
+      <h2 class="title">
+        {{ title }}
+      </h2>
+      <app-input [form]="searchForm"
+                 prop="searchTerm"
+                 label="Search"
+                 (updated)="search()" />
+
+      <app-select [form]="searchForm"
+                  label="Activity"
+                  prop="facility"
+                  [options]="searchCategories"
+                  (updated)="search()" />
+
+    </div>
+  </form>
+</div>
