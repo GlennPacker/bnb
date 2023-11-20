@@ -1,1 +1,17 @@
-<p>photo-gallery works!</p>
+<h1>
+  Vue De Vallon Chambre D'Hôte - Photo Gallery
+</h1>
+<div class="photo-gallery-container">
+  <p>
+    Some Water Sports and Paragliding are added for a short time on <a
+       href="https://www.instagram.com/flyingwatersports/"
+       target="_blank">Instagram</a>.
+  </p>
+
+  <div class="photo-gallery-grid">
+    <img *ngFor="let photo of photos"
+         [src]="photo.src"
+         [alt]="photo.alt"
+         class="photo" />
+  </div>
+</div>

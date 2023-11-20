@@ -80,9 +80,9 @@ const data: Location[] = [{
   ]
 }, {
   id: 5,
-  alt: 'Etang de Sagnat',
-  src: '/assets/Etang de Sagnat.jpg',
-  title: 'Etang de Sagnat',
+  alt: 'Étang de Sagnat',
+  src: '/assets/Étang de Sagnat.jpg',
+  title: 'Étang de Sagnat',
   facilities: [
     activityIcon.bar,
     activityIcon.beach,
