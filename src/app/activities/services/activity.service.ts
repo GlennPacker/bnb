@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of, tap } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { activityIcon } from 'src/app/core/models/activityIcons';
 import Activity from '../models/activity';
 import { ActivityType } from '../models/activityType';
@@ -31,7 +31,7 @@ const data = [{
   id: 7,
   alt: '3',
   src: '/assets/sup - stand up paddleboard.jpg',
-  activityType: ActivityType.Craft,
+  activityType: ActivityType.WaterSports,
   icon: activityIcon.sup,
   title: 'SUP'
 },
@@ -77,9 +77,6 @@ const data = [{
 })
 export class ActivityService {
   public get(): Observable<Activity[]> {
-    return of(data)
-      .pipe(
-        tap(data => console.log('Rooms:', JSON.stringify(data))),
-      );
+    return of(data);
   }
 }

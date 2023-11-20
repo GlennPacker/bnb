@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import Search from '../../component-library/models/sssearch';
+import Search from '../../component-library/models/Search';
 import Location from '../models/location';
 
 export const locationsLoad = createAction(

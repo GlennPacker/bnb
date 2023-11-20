@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import Search from '../../../component-library/models/sssearch';
+import Search from '../../../component-library/models/Search';
 import * as fromStore from '../../state';
 
 @Component({

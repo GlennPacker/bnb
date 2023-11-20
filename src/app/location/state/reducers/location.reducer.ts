@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import Search from '../../../component-library/models/sssearch';
+import Search from '../../../component-library/models/Search';
 import Activity from '../../models/location';
 import * as actions from '../actions';
 

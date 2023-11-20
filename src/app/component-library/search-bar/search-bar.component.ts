@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import Search from 'src/app/component-library/models/sssearch';
+import Search from 'src/app/component-library/models/Search';
 import Option from '../models/option';
 
 @Component({

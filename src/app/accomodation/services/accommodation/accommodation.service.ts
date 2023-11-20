@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of, tap } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import Accommodation from '../../models/Accommodation';
 import { RoomType } from '../../models/RoomType';
@@ -70,17 +70,14 @@ const data = [{
   providedIn: 'root'
 })
 export class AccommodationService {
-  getAll(): Observable<Accommodation[]> {
-    return of(data)
-      .pipe(
-        tap(data => console.log('Rooms:', JSON.stringify(data))),
-      );
-  }
-
-  get(roomNo: number): Observable<Accommodation> {
+  public get(roomNo: number): Observable<Accommodation> {
     return this.getAll()
       .pipe(
         map(((rooms: Accommodation[]) => rooms.find(data => data.room === roomNo)))
       )
+  }
+
+  public getAll(): Observable<Accommodation[]> {
+    return of(data);
   }
 }

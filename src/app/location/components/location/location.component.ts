@@ -3,7 +3,7 @@ import { FormGroup } from '@angular/forms';
 import FieldUpdated from 'src/app/component-library/models/fieldUpdated';
 import Option from 'src/app/component-library/models/option';
 import { activityIcon } from 'src/app/core/models/activityIcons';
-import Search from '../../../component-library/models/sssearch';
+import Search from '../../../component-library/models/Search';
 import Location from '../../models/location';
 
 @Component({

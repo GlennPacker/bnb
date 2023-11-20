@@ -1,3 +1,4 @@
 <app-activities
   [activities]="activities$ | async"
+  (searchUpdated)="search($event)"
 >
