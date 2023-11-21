@@ -8,7 +8,7 @@ import Facility from '../../models/Facility';
   styleUrls: ['./facilities.component.scss']
 })
 export class FacilitiesComponent {
-  facilities: Facility[] = [{
+  public facilities: Facility[] = [{
     description: 'Hot Tub',
     icon: 'hot_tub'
   }, {
@@ -25,46 +25,29 @@ export class FacilitiesComponent {
     description: 'Cards and Games',
     icon: 'casino'
   }, {
-    description: 'Tea & Coffee making facilities',
-    icon: 'coffee'
-  }, {
-    description: 'Outdoor Dining Furniture',
-    icon: 'deck'
-  }, {
-    description: 'Evening Meals and Picnics to order',
-    tooltip: 'Must give reasonable notice. This is a paid extra service.',
-    icon: 'restaurant'
-  }, {
     description: 'BBQ',
     icon: 'outdoor_grill'
-  }, {
-    description: 'Long Term Stays Available',
-    icon: 'calendar_month'
   }, {
     description: 'TV',
     icon: 'tv'
   }, {
     description: 'Dedicated workspace',
     icon: 'desk'
+  }, {
+    description: 'Evening Meals and Picnics to order',
+    tooltip: 'Must give reasonable notice. This is a paid extra service.',
+    icon: 'restaurant'
+  }, {
+    description: 'Outdoor Dining Furniture',
+    icon: 'deck'
+  }, {
+    description: 'Tea & Coffee making facilities',
+    icon: 'coffee'
+  }, {
+    description: 'Long Term Stays Available',
+    icon: 'calendar_month'
   }]
-
-  transport = [{
-    description: 'Free parking on premises',
-    icon: 'directions_car'
-  }, {
-    description: 'Close to Train Station',
-    icon: 'train'
-  }, {
-    description: 'Half hour from airport',
-    icon: 'flight'
-  }, {
-    description: 'Airport pickup',
-    tooltip: 'Free when staying 2 or more nights.',
-    icon: 'airport_shuttle'
-  }]
-
-
-  sports = [{
+  public sports = [{
     ...activityIcon.paragliding,
     tooltip: 'Must have a license and insurance',
   },
@@ -87,4 +70,18 @@ export class FacilitiesComponent {
   },
   activityIcon.cycling
   ]
+  public transport = [{
+    description: 'Free parking on premises',
+    icon: 'directions_car'
+  }, {
+    description: 'Close to Train Station',
+    icon: 'train'
+  }, {
+    description: 'Half hour from airport',
+    icon: 'flight'
+  }, {
+    description: 'Airport pickup',
+    tooltip: 'Free when staying 2 or more nights.',
+    icon: 'airport_shuttle'
+  }]
 }
