@@ -39,6 +39,10 @@ export const activityIcon = {
     description: 'Hiking and trails',
     icon: 'hiking'
   },
+  gym: {
+    description: 'Outdoor Gym',
+    icon: 'fitness_center'
+  },
   kayaking: {
     description: 'Kayaking',
     icon: 'kayaking'
@@ -46,6 +50,10 @@ export const activityIcon = {
   localTowns: {
     description: 'Local Towns',
     icon: 'location_city'
+  },
+  natureTrail: {
+    description: 'Nature Trail',
+    icon: 'cruelty_free',
   },
   paragliding: {
     description: 'Paragliding',

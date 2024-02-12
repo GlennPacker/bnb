@@ -8,7 +8,7 @@ import Facility from '../../models/Facility';
   styleUrls: ['./facilities.component.scss']
 })
 export class FacilitiesComponent {
-  facilities: Facility[] = [{
+  public facilities: Facility[] = [{
     description: 'Hot Tub',
     icon: 'hot_tub'
   }, {
@@ -47,8 +47,30 @@ export class FacilitiesComponent {
     description: 'Dedicated workspace',
     icon: 'desk'
   }]
-
-  transport = [{
+  public sports = [{
+    ...activityIcon.paragliding,
+    tooltip: 'Must have a license and insurance',
+  },
+  activityIcon.kayaking,
+  {
+    ...activityIcon.basketball,
+    description: 'Basketball and hoop',
+  },
+  activityIcon.windsurfing,
+  activityIcon.foil,
+  {
+    ...activityIcon.gym,
+    description: 'Small Gym',
+  },
+  activityIcon.hiking,
+  {
+    ...activityIcon.sup,
+    description: 'SUP',
+    tooltip: 'Stand Up Paddleboard',
+  },
+  activityIcon.cycling
+  ]
+  public transport = [{
     description: 'Free parking on premises',
     icon: 'directions_car'
   }, {
@@ -62,29 +84,4 @@ export class FacilitiesComponent {
     tooltip: 'Free when staying 2 or more nights.',
     icon: 'airport_shuttle'
   }]
-
-
-  sports = [{
-    ...activityIcon.paragliding,
-    tooltip: 'Must have a license and insurance',
-  },
-  activityIcon.kayaking,
-  {
-    ...activityIcon.basketball,
-    description: 'Basketball and hoop',
-  },
-  activityIcon.windsurfing,
-  activityIcon.foil,
-  {
-    description: 'Small Gym',
-    icon: 'fitness_center'
-  },
-  activityIcon.hiking,
-  {
-    ...activityIcon.sup,
-    description: 'SUP',
-    tooltip: 'Stand Up Paddleboard',
-  },
-  activityIcon.cycling
-  ]
 }

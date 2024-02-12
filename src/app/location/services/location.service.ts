@@ -35,6 +35,7 @@ const data: Location[] = [{
   facilities: [
     activityIcon.kayaking,
     activityIcon.hiking,
+    activityIcon.natureTrail,
     activityIcon.parking,
     activityIcon.pets,
     activityIcon.views,
@@ -65,15 +66,15 @@ const data: Location[] = [{
   src: '/assets/Bessines sur Gartempe.jpg',
   title: 'Bessines sur Gartempe',
   facilities: [
-    activityIcon.cycling,
-    activityIcon.coffee,
+    activityIcon.atm,
     activityIcon.bar,
     activityIcon.boulangerie,
+    activityIcon.coffee,
+    activityIcon.cycling,
+    activityIcon.localTowns,
     activityIcon.parking,
     activityIcon.restaurant,
     activityIcon.shopping,
-    activityIcon.localTowns,
-    activityIcon.atm
   ],
   paras: [
     'The town of Bessines sur Gartempe is 8mins drive away and has a local market, 2 supermarkets, a couple of bars and all the essentials.'
@@ -85,12 +86,14 @@ const data: Location[] = [{
   title: 'Étang de Sagnat',
   facilities: [
     activityIcon.bar,
-    activityIcon.beach,
     activityIcon.basketball,
+    activityIcon.beach,
     activityIcon.coffee,
     activityIcon.cycling,
     activityIcon.fishing,
+    activityIcon.gym,
     activityIcon.hiking,
+    activityIcon.natureTrail,
     activityIcon.parking,
     activityIcon.pets,
     activityIcon.restaurant,
@@ -179,9 +182,9 @@ const data: Location[] = [{
     activityIcon.kayaking,
     activityIcon.parking,
     activityIcon.pets,
+    activityIcon.restaurant,
     activityIcon.sup,
     activityIcon.swimming,
-    activityIcon.restaurant,
     activityIcon.views,
   ],
   paras: [
@@ -214,10 +217,13 @@ const data: Location[] = [{
     activityIcon.hiking,
     activityIcon.parking,
     activityIcon.pets,
+    activityIcon.sup,
+    activityIcon.swimming,
     activityIcon.views,
+    activityIcon.windsurfing
   ],
   paras: [
-    `Étang de la Brousse in Marsac is a 18mins away and great lake. This spot is good for hiking, dog walks and fishing`
+    `Étang de la Brousse in Marsac is a 18mins away and great lake for picnics and barbecues. This spot is good for hiking, dog walks and fishing`
   ]
 }
   , {
