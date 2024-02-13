@@ -25,27 +25,27 @@ export class FacilitiesComponent {
     description: 'Cards and Games',
     icon: 'casino'
   }, {
-    description: 'Tea & Coffee making facilities',
-    icon: 'coffee'
-  }, {
-    description: 'Outdoor Dining Furniture',
-    icon: 'deck'
-  }, {
-    description: 'Evening Meals and Picnics to order',
-    tooltip: 'Must give reasonable notice. This is a paid extra service.',
-    icon: 'restaurant'
-  }, {
     description: 'BBQ',
     icon: 'outdoor_grill'
-  }, {
-    description: 'Long Term Stays Available',
-    icon: 'calendar_month'
   }, {
     description: 'TV',
     icon: 'tv'
   }, {
     description: 'Dedicated workspace',
     icon: 'desk'
+  }, {
+    description: 'Evening Meals and Picnics to order',
+    tooltip: 'Must give reasonable notice. This is a paid extra service.',
+    icon: 'restaurant'
+  }, {
+    description: 'Outdoor Dining Furniture',
+    icon: 'deck'
+  }, {
+    description: 'Tea & Coffee making facilities',
+    icon: 'coffee'
+  }, {
+    description: 'Long Term Stays Available',
+    icon: 'calendar_month'
   }]
   public sports = [{
     ...activityIcon.paragliding,
