@@ -6,7 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./grid-image.component.scss']
 })
 export class GridImageComponent {
-  @Input() alt: string;
-  @Input() link: string;
-  @Input() src: string;
+  @Input() public alt: string;
+  @Input() public imgClass: string;
+  @Input() public link: string;
+  @Input() public src: string;
 }

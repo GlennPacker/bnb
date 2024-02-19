@@ -7,6 +7,7 @@ import Accommodation from '../../models/Accommodation';
   styleUrls: ['./grid-room.component.scss']
 })
 export class GridRoomComponent {
-  @Input() room: Accommodation;
-  @Input() index: number;
+  @Input() public index: number;
+  @Input() public link: string;
+  @Input() public room: Accommodation;
 }

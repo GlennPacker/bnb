@@ -1,4 +1,7 @@
-<div class="grid-room">
+<div 
+  class="grid-room"
+  [routerLink]="link"
+>
   <div class="room-container">
     <h3>{{ room.name }}</h3>
     <ul *ngIf="room.bullets">
@@ -7,6 +10,6 @@
         {{ bp }}
       </li>
     </ul>
-    <div>{{ room.description }}</div>
+    <!-- <div>{{ room.description }}</div> -->
   </div>
 </div>

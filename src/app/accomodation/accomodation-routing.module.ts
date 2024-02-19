@@ -8,7 +8,7 @@ const routes: Route[] = [
   {
     path: ':id',
     component: RoomContainerComponent,
-    resolve: { accommodationList: accommodationResolver },
+    resolve: { room: accommodationResolver },
   },
   {
     path: '',

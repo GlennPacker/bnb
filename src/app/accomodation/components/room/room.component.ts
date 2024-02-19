@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import Accommodation from '../../models/Accommodation';
 
 @Component({
   selector: 'app-room',
@@ -6,5 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./room.component.scss']
 })
 export class RoomComponent {
-  @Input() id: string | null = '';
+  @Input() public id: string | null = '';
+  @Input() public room: Accommodation | undefined;
 }

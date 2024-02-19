@@ -1,39 +1,49 @@
-<div class="app-grid">
+<div class="welcome-grid">
+  <app-grid-image 
+    src="/assets/vue de vallon bersac.jpg" 
+    alt="front view of Vue De Vallon, Bersac Sur Ravalier, Haute Vienne" 
+    link="/accommodation"
+    class="i1"
+    imgClass="welcome-image"
+  />
   <app-grid-shield
     title="The Chambre D'hôte" 
-    link="/accommodation"
+    routerLink="/accommodation"
+    class="t1"
   >
     Vue de Vallon offers five light airy rooms in a peaceful village setting. The rooms are decorated in typical French rustic style with comfortable beds, fresh linen and en-suite or private bathrooms.  We aim to make your stay as relaxing as possible. 
   </app-grid-shield>
 
   <app-grid-image 
-    src="/assets/vue de vallon bersac.jpg" 
-    alt="front view of Vue De Vallon, Bersac Sur Ravalier, Haute Vienne" 
-    link="/accommodation"
-  />
-
-  <app-grid-image 
     src="/assets/vue de vallon bersac limoges.jpg" 
     alt="The Terrace and View from Vue De Vallon over Bersac Sur Ravalier, Limoges, Haute Vienne" 
     link="/photo-gallery"
+    class="i2"
+    imgClass="welcome-image"
   />
-
+  
   <app-grid-shield
     title="The Views" 
-    link="/photo-gallery">
-    view text
-  </app-grid-shield>
-
-  <app-grid-shield
-    title="Lakes, Rivers and Attractions" 
-    link="/location"
+    routerLink="/photo-gallery"
+    class="t2"
   >
-    Situated in the Haute Vienne region of France (previously known as the Limousin), Vue de Vallon is surrounded by lakes,  rivers and picturesque French villages.  Whether cycling, kayaking, walking, crafting or exploring are your passion - there's something for everyone. 
+    ZZZZZZZZZZZZZ text needed ZZZZZZZZZZZZZZZZZZZZZZZZ
   </app-grid-shield>
 
   <app-grid-image 
     src="/assets/Haute Vienne Lakes and Rivers.jpg" 
     alt="Front view of Vue De Vallon, Chambre D'hôte in Bersac Sur Ravalier, Haute Vienne" 
     link="/location"
+    class="i3"
+    imgClass="welcome-image"
   />
+
+  <app-grid-shield
+    title="Lakes, Rivers and Attractions" 
+
+    routerLink="/location"
+    class="t3"
+  >
+    Situated in the Haute Vienne region of France (previously known as the Limousin), Vue de Vallon is surrounded by lakes,  rivers and picturesque French villages.  Whether cycling, kayaking, walking, crafting or exploring are your passion - there's something for everyone. 
+  </app-grid-shield>
 </div>

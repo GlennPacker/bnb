@@ -4,7 +4,7 @@
     [room]="room"
     class="gc-t-{{ i }}"
     title="The Chambre D'Hôte" 
-    link="/accommodation"
+    link="./{{ i + 1 }}"
   />
 
   <app-grid-image 
@@ -12,6 +12,6 @@
     class="gc-i-{{ i }}"
     src="/assets/vue de vallon bersac.jpg" 
     alt="front view of Vue De Vallon, Bersac Sur Ravalier, Haute Vienne" 
-    link="/room/{{ i }}"
+    link="./{{ i + 1 }}"
   />
 </div>

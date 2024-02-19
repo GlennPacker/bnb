@@ -208,6 +208,25 @@ const data: Location[] = [{
   ]
 }, {
   id: 12,
+  alt: '',
+  src: '',
+  title: 'Limoges',
+  facilities: [
+    activityIcon.atm,
+    activityIcon.bar,
+    activityIcon.boulangerie,
+    activityIcon.coffee,
+    activityIcon.fishing,
+    activityIcon.gym,
+    activityIcon.localTowns,
+    activityIcon.restaurant,
+    activityIcon.shopping
+  ],
+  paras: [
+    'Vue de Vallon is a short car or train journey from the historic city of Limoges.  Famous for its fine porcelain, there is much to discover and explore.   The Musée National  Adrien Débouche is a must for anyone interested in this heritage, whilst also exploring exploring the exciting shopping, dining and entertainment on offer.'
+  ]
+}, {
+  id: 13,
   alt: 'Étang de la Brousse',
   src: '/assets/Étang de la Brousse.jpg',
   title: 'Étang de la Brousse',
@@ -227,7 +246,7 @@ const data: Location[] = [{
   ]
 }
   , {
-  id: 13,
+  id: 14,
   alt: 'Le Taurion at Châtelus-le-Marcheix',
   src: '/assets/le Marcheix le Taurion river.jpg',
   title: 'Châtelus-le-Marcheix',
@@ -247,7 +266,7 @@ const data: Location[] = [{
     'This reservoir and beach offers water sports and great views.'
   ]
 }, {
-  id: 14,
+  id: 15,
   alt: `Lac de Chambon`,
   src: '/assets/Lac de Chambon.jpg',
   title: `Lac de Chambon`,
@@ -271,7 +290,7 @@ const data: Location[] = [{
     `It is a great spot for hiking, watersports, beach and dog walking and teh nearby town of Crozant is worth a visit.`
   ]
 }, {
-  id: 15,
+  id: 16,
   alt: 'Lac de Vassivière',
   src: '/assets/Lac de Vassivière.jpg',
   title: 'Lac de Vassivière',
@@ -296,7 +315,7 @@ const data: Location[] = [{
     `It is great for water sports, dogs and hiking.`
   ]
 }, {
-  id: 16,
+  id: 17,
   alt: 'Vienne at Confolens',
   src: '/assets/Vienne at Confolens.jpg',
   title: 'Confolens',
