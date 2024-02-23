@@ -1,0 +1,29 @@
+.Room-table {
+  display: grid;
+  grid-template-columns: 2rem auto;
+}
+
+.food-container,
+.amenities-container,
+.Room-container {
+  width: 60vw;
+  margin-left: 20vw;
+}
+
+h1,
+h2 {
+  margin-left: 20vw;
+}
+
+@media screen and (max-width: 700px) {
+  .food-container,
+  .amenities-container,
+  .Room-container {
+    width: 80vw;
+  }
+
+  h1,
+  h2 {
+    margin-left: 10vw;
+  }
+}

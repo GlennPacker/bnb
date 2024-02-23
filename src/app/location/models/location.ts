@@ -1,4 +1,4 @@
-import Facility from 'src/app/accomodation/models/Facility';
+import Facility from 'src/app/room/models/Facility';
 
 export default class Location {
   public alt: string;

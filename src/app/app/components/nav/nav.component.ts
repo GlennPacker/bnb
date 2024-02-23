@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
-  isPhone = false;
-  routes = [
-    { url: '/accommodation', label: 'Accommodation'},
+  public isPhone = false;
+  public routes = [
+    { url: '/room', label: 'Accommodation'},
     { url: '/photo-gallery', label: 'Photo Gallery'},
     { url: '/location', label: 'Attractions'},
     { url: '/activities', label: 'Activities'},
@@ -22,11 +22,11 @@ export class NavComponent implements OnInit {
     private router: Router
   ) {}
 
-  navClick (url: string) {
+  public navClick (url: string) {
     this.router.navigateByUrl(url);
   }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.responsive.observe([   
       // Breakpoints.HandsetPortrait,
       // Breakpoints.Handset
@@ -34,7 +34,6 @@ export class NavComponent implements OnInit {
       Breakpoints.XSmall
       ])
       .subscribe(result => {
-
         this.isPhone = false; 
 
         if (result.matches) {

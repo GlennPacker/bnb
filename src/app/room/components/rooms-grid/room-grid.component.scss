@@ -1,0 +1,69 @@
+.app-grid {
+  display: 'grid';
+  grid-template-areas: 
+    "gc-t-0 gc-i-0"
+    "gc-i-1 gc-t-1"
+    "gc-t-2 gc-i-2"
+    "gc-i-3 gc-t-3"
+    "gc-t-4 gc-i-4"
+    "gc-i-5 gc-t-5";
+}
+
+.gc-i-1 {
+  grid-area: gc-i-1; 
+}
+.gc-i-2 {
+  grid-area: gc-i-2; 
+}
+.gc-i-3 {
+  grid-area: gc-i-3; 
+}
+.gc-i-4 {
+  grid-area: gc-i-4; 
+}
+.gc-i-5 {
+  grid-area: gc-i-5; 
+}
+.gc-i-6 {
+  grid-area: gc-i-6; 
+}
+
+.gc-t-1 {
+  grid-area: gc-t-1; 
+}
+.gc-t-2 {
+  grid-area: gc-t-2; 
+}
+.gc-t-3 {
+  grid-area: gc-t-3; 
+}
+.gc-t-4 {
+  grid-area: gc-t-4; 
+}
+.gc-t-5 {
+  grid-area: gc-t-5; 
+}
+.gc-t-6 {
+  grid-area: gc-t-6; 
+}
+
+@media screen and (max-width: 600px) {
+  .Room-grid {
+    grid-template-rows: 11rem auto 11rem auto 11rem auto 11rem auto 11rem auto 11rem auto;
+  }
+
+
+  .app-grid { 
+    grid-template-areas: 
+    "gc-t-0" 
+    "gc-i-0"
+    "gc-t-1"
+    "gc-i-1"
+    "gc-t-2" 
+    "gc-i-2"
+    "gc-t-3"
+    "gc-i-3"
+    "gc-t-4"
+    "gc-i-4";
+  }
+}
