@@ -1,5 +1,5 @@
 {
-  "name": "bnb",
+  "name": "vue-du-vallon",
   "version": "0.0.0",
   "scripts": {
     "start": "ng serve",
