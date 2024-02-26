@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
@@ -28,7 +28,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
    provideRouter(
     routes, 
     withComponentInputBinding()
-  )],
+  ),
+   provideClientHydration()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

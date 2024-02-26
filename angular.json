@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bnb",
+            "outputPath": "dist/bnb/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -108,6 +108,61 @@
               "src/**/*.html"
             ]
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/bnb/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json",
+            "inlineStyleLanguage": "scss"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@angular-devkit/build-angular:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "bnb:build:development",
+              "serverTarget": "bnb:server:development"
+            },
+            "production": {
+              "browserTarget": "bnb:build:production",
+              "serverTarget": "bnb:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@angular-devkit/build-angular:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "bnb:build:production",
+              "serverTarget": "bnb:server:production"
+            },
+            "development": {
+              "browserTarget": "bnb:build:development",
+              "serverTarget": "bnb:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
