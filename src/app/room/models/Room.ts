@@ -1,11 +1,13 @@
-import { RoomType } from './roomType';
+import Image from './Image';
+import { RoomType } from './RoomType';
 
 export default class Room {
-  room: number;
-  type: RoomType;
-  name: string;
-  description: string;
-  bullets: string[];
-  img: string;
-  alt: string;
+  public alt: string;
+  public bullets: string[];
+  public description: string;
+  public img: string;
+  public moreImages: Image[];
+  public name: string;
+  public room: number;
+  public type: RoomType;
 }

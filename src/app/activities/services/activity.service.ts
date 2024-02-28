@@ -5,78 +5,104 @@ import Activity from '../models/activity';
 import { ActivityType } from '../models/activityType';
 
 const data = [{
-  id: 1,
   alt: 'Kayaking',
-  src: '/assets/kayaking.jpg',
+  src: 'kayaking.jpg',
   activityType: ActivityType.WaterSports,
   icon: activityIcon.kayaking.icon,
-  title: 'Kayaking'
+  title: 'Kayaking',
+  paras: [
+    'Kayaking for all levels with local guide, training and equipment rental available', 
+    'White water runs are in the area and we only offer pickup and drop off service'
+  ]
 },
 {
-  id: 8,
   alt: 'Paragliding',
-  src: '/assets/paragliding.jpg',
+  src: 'paragliding.jpg',
   activityType: ActivityType.Others,
   icon: activityIcon.paragliding.icon,
-  title: 'Paragliding'
+  title: 'Paragliding *',
+  paras: [
+    `Paragliding pick up and drop off with local guide. We have some great flying and one of several take offs just 10 mins drive away.`,
+    `Must have your own wing, insurance and license.`
+  ]
 },
 {
-  id: 2,
   alt: '',
-  src: '/assets/',
+  src: '',
   activityType: ActivityType.Craft,
   title: 'Sewing'
 },
 {
-  id: 7,
-  alt: '3',
-  src: '/assets/sup - stand up paddleboard.jpg',
+  alt: '',
+  src: 'sup - stand up paddleboard.jpg',
   activityType: ActivityType.WaterSports,
   icon: activityIcon.sup,
-  title: 'SUP'
+  title: 'SUP',
+  paras: [
+    'SUP (Stand Up Paddleboard) for all levels.',
+    'This is a great place to learn with a number of flat water lakes.', 
+  ]
 },
 {
-  id: 3,
   alt: '',
-  src: '/assets/',
+  src: '',
   activityType: ActivityType.Craft,
   title: 'Book Making'
 },
 {
-  id: 4,
   alt: '',
-  src: '/assets/windsurfing.jpg',
+  src: 'windsurfing.jpg',
   activityType: ActivityType.WaterSports,
   icon: activityIcon.windsurfing.icon,
-  title: 'Windsurfing'
+  title: 'Windsurfing *',
+  paras: [
+    'Windsurfing with several great lakes to choose from including Lac Saint Pardoux', 
+    'Equipment rental and training available'
+  ]
 }, {
-  id: 5,
   alt: '',
-  src: '/assets/',
+  src: '',
   activityType: ActivityType.WaterSports,
-  title: 'Windfoil',
+  title: 'Windfoil *',
   icon: activityIcon.foil.icon,
+  paras: [
+    'Windfoil for all levels ', 
+    'Equipment rental and training available'
+  ]
 }, {
-  id: 6,
   alt: 'Wing Surfing and Foil',
-  src: '/assets/wing surfing and foil.jpg',
+  src: 'wing surfing and foil.jpg',
   activityType: ActivityType.WaterSports,
   icon: activityIcon.foil.icon,
-  title: 'Wing Surfing and Foil'
+  title: 'Wing Surfing and Foil *',
+  paras: [
+    'Wing Surfing and foil on Lac Saint Pardoux a lake of 330 Hectares.'
+  ]
 }, {
-  id: 7,
   alt: 'Wind Sup',
-  src: '/assets/windsup.jpg',
+  src: 'windsup.jpg',
   activityType: ActivityType.WaterSports,
   icon: activityIcon.windsurfing.icon,
-  title: 'Wind SUP'
-},] as Activity[];
+  title: 'Wind SUP *',
+  paras: [
+    'Wind Sup is a very similar to windsurfing but with a much larger more stable board.',
+    'It is a great starting place for those wishing to learn windsurfing of wing surfing.'
+  ]
+}] as Activity[];
 
 @Injectable({
   providedIn: 'root'
 })
 export class ActivityService {
   public get(): Observable<Activity[]> {
-    return of(data);
+    return of(
+      data
+        .filter(d => d.src)
+        .map((act, id) => ({ 
+          ...act, 
+          src: `/assets/${act.src}`,
+          id
+        }))
+      );
   }
 }

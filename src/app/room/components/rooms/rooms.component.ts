@@ -7,5 +7,5 @@ import Room from '../../models/room';
   styleUrls: ['./rooms.component.scss']
 })
 export class RoomsComponent {
-  @Input() public room: Room[];
+  @Input() public rooms: Room[];
 }

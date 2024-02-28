@@ -9,14 +9,14 @@ import Room from '../../models/room';
   styleUrls: ['./rooms-container.component.scss']
 })
 export class RoomsContainerComponent implements OnInit {
-  room$: Observable<Room[]> | undefined;
+  rooms$: Observable<Room[]> | undefined;
 
   constructor(
     private activatedRoute: ActivatedRoute,
   ) {}
 
   public ngOnInit(): void {
-    this.room$ = this.activatedRoute.data.pipe(
+    this.rooms$ = this.activatedRoute.data.pipe(
       map(data => data.RoomList)
     );
   }

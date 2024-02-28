@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { RoomType } from '../../models/RoomType';
 import Room from '../../models/room';
-import { RoomType } from '../../models/roomType';
 
 const data = [{
   room: 1,
@@ -14,7 +14,7 @@ const data = [{
     'Valley View',
     'Sleeps 2',
   ],
-  img: '/assets/vue de vallon bersac.jpg',
+  img: `/assets/Chambre D'Hote - Chambre 1.jpg`,
   alt: `Twin room in Chambre D'hôte in Bersac near a20 Limoges`,
 }, {
   room: 2,
@@ -26,7 +26,7 @@ const data = [{
     'Valley View',
     'Sleeps 2',
   ],
-  img: '/assets/vue de vallon bersac.jpg',
+  img: `/assets/Chambre D'Hote - Chambre 2.jpg`,
   alt: `Double room in Chambre D'hôte in Bersac near a20 Limoges, Haute Vienne`,
 }, {
   room: 3,
@@ -50,7 +50,17 @@ const data = [{
     'Garden View',
     'Sleeps 2',
   ],
-  img: '/assets/vue de vallon bersac.jpg',
+  img: `/assets/Chambre D'Hote - Chambre 4.jpg`,
+  moreImages: [
+    { 
+      src: `/assets/Chambre D'Hote - Chambre 4 photo 2.jpg`,
+      alt: 'Chambre 4 at Vue Du Vallon'
+    },
+    {
+     src: `/assets/Chambre D'Hote - Chambre 4 photo 3.jpg`,
+     alt: `Vue Du Vallon Chambre D'hôte room 4`
+    }
+  ],
   alt: `Double room in Chambre D'hôte in Bersac Sur Ravailier near Limoges`,
 }, {
   room: 5,

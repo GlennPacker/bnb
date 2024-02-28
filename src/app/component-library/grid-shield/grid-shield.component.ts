@@ -6,6 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./grid-shield.component.scss']
 })
 export class GridShieldComponent {
-  @Input() title: string;
-  @Input() link: string;
+  @Input() public title: string;
 }

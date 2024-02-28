@@ -1,10 +1,23 @@
 <div 
-    class="item pointer" 
-    [routerLink]="link"
-  >
-    <img 
-      [src]="src"
-      [alt]="alt" 
-      [class]="imgClass || 'app-image'"
-    />
-  </div>
+  *ngIf="link"
+  class="item pointer" 
+  [routerLink]="link"
+>
+  <img 
+    [src]="src"
+    [alt]="alt" 
+    [class]="imgClass || 'app-image'"
+  />
+</div>
+
+<div 
+  *ngIf="!link"
+  class="item"
+>
+  <img 
+    [src]="src"
+    [alt]="alt" 
+    [class]="imgClass || 'app-image'"
+  />
+</div>
+

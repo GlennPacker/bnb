@@ -208,8 +208,8 @@ const data: Location[] = [{
   ]
 }, {
   id: 12,
-  alt: '',
-  src: '',
+  alt: 'Limoges Bénédictins station',
+  src: '/assets/Limoges.jpg',
   title: 'Limoges',
   facilities: [
     activityIcon.atm,

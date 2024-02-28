@@ -1,8 +1,10 @@
 {
   "editor.codeActionsOnSave": {
-    "source.organizeImports": "explicit",
-    "source.fixAll": "explicit"
+    "source.organizeImports": "always",
+    "source.fixAll": "always"
   },
-  "html.format.wrapAttributes": "force-aligned",
-  "files.eol": "\n"
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "files.eol": "\n",
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnSave": true
 }

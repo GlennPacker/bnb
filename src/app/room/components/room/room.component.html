@@ -1,2 +1,56 @@
-room number: {{ id }}
-room {{ room | json }}
+<div class="room-container">
+
+  <div class="photo-container">
+    <div class="thumbnail-container">
+      <img
+        *ngFor="let img of images; index as i"
+        [src]="img.src"
+        [alt]="img.alt"
+        class="img{{ i }}"
+        (click)="showImage(i)"
+      />
+    </div>
+    @if(largeImage) {
+      <div class="large-image-frame">
+        <img 
+          [src]="largeImage?.src"
+          alt="large {{ largeImage?.alt }}"
+        />
+        <div 
+          class="close-btn"
+          (click)="hideImage()"
+        >
+          X
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="features-container">
+    <h1>Room {{ id }} - Vue Du Vallon</h1>
+    Room Type: {{ room.type }}
+
+    <div *ngFor="let feature of room.bullets">
+      {{ feature }}
+    </div>
+  </div>
+
+  <div class="about-container">
+    <p>
+      {{ room.description }}
+    </p>
+
+    <p>
+      Featuring pleasing rustic beams and calm white walls, with stylish decorative accents, soft towels, pillows and linen. Warming heaters or cooling fans depending on the weather and your preference, ample hanging space, quality toiletries and either views of the garden and terrace or across the valley.
+    </p>
+
+    <p>
+      We are family-friendly and can supply a travel cot and high chair as required.  We are also happy to welcome your well-behaved animal companions.
+    </p>
+
+    <p>
+      All our rooms are non-smoking and we ask that you consider your fellow guests if you wish to  smoke outside. 
+    </p>
+  </div>
+
+</div>
