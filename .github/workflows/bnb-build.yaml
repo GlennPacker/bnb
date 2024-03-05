@@ -14,7 +14,7 @@ on:
         type: string
 
 env:
-  DEPLOYMENT_FOLDER: dist/bnb
+  DEPLOYMENT_FOLDER: dist/bnb/browser
 
 jobs:
 # Please do not rename this job
