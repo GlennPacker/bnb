@@ -1,6 +1,6 @@
 import { inject } from '@angular/core';
 import { ResolveFn } from '@angular/router';
-import Room from '../../models/room';
+import Room from '../../models/Room';
 import { RoomService } from '../../services/room/room.service';
 
 export const RoomResolver: ResolveFn<Room> = route => {

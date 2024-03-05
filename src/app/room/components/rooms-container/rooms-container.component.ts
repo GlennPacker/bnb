@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, map } from 'rxjs';
-import Room from '../../models/room';
+import Room from '../../models/Room';
 
 @Component({
   selector: 'app-rooms-container',

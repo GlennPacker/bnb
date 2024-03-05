@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
+import Room from '../../models/Room';
 import { RoomType } from '../../models/RoomType';
-import Room from '../../models/room';
 
 const data = [{
   room: 1,
@@ -38,7 +38,7 @@ const data = [{
     'Garden View',
     'Sleeps 4',
   ],
-  img: '/assets/vue de vallon bersac.jpg',
+  img: '/assets/room 3.jpg',
   alt: `Family room in Chambre D'hôte near A20 Limoges, Haute Vienne`,
 }, {
   room: 4,
@@ -72,8 +72,18 @@ const data = [{
     'Garden View',
     'Sleeps 5',
   ],
-  img: '/assets/vue de vallon bersac.jpg',
-  alt: `Large FAmily room in Chambre D'hôte in Bersac by the A20 near Limoges`,
+  img: '/assets/room 5.jpg',
+  moreImages: [
+    { 
+      src: `/assets/room 5 bunk beds.jpg`,
+      alt: `Room 5 Family Room's Bunk Beds`
+    },
+    { 
+      src: `/assets/room 5 family room.jpg`,
+      alt: `Room 5 Large Family Room`
+    }
+  ],
+  alt: `The Largest Family room at the Chambre D'hôte in Bersac Sur Ravalier near the A20 Limoges`,
 }] as Room[];
 
 @Injectable({

@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { By } from '@angular/platform-browser';
-import Room from '../../models/room';
+import Room from '../../models/Room';
 import { GridRoomComponent } from './grid-room.component';
 
 describe('GridRoomComponent', () => {

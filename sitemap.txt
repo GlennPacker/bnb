@@ -1,0 +1,6 @@
+http://vueduvallon.fr/
+http://vueduvallon.fr/room
+http://vueduvallon.fr/photo-gallery
+http://vueduvallon.fr/location
+http://vueduvallon.fr/activities
+http://vueduvallon.fr/booking

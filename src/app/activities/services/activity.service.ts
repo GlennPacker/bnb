@@ -85,8 +85,8 @@ const data = [{
   icon: activityIcon.windsurfing.icon,
   title: 'Wind SUP *',
   paras: [
-    'Wind Sup is a very similar to windsurfing but with a much larger more stable board.',
-    'It is a great starting place for those wishing to learn windsurfing of wing surfing.'
+    'Wind Sup is very similar to windsurfing but with a much larger more stable board.',
+    'It is a great starting place for those wishing to learn windsurfing or wing surfing.'
   ]
 }] as Activity[];
 
