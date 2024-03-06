@@ -14,7 +14,7 @@ on:
         type: string
 
 env:
-  DEPLOYMENT_FOLDER: dist
+  DEPLOYMENT_FOLDER: dist/bnb/browser/
 
 jobs:
 # Please do not rename this job
@@ -46,7 +46,7 @@ jobs:
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-eu.ionos.space
-          project-id: a27009c6-29b3-495a-85e3-ed353bdcbdec
+          project-id: d5928656-9cf8-4840-8ff7-f3a677ef4729
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
